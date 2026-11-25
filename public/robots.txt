@@ -1,0 +1,39 @@
+# Robots.txt for Forth & Vale
+# https://www.forthandvale.com/robots.txt
+
+# Allow all user agents to access the site
+User-agent: *
+Allow: /
+
+# Allow all user agents to access CSS and JS files
+Allow: /assets/
+Allow: /dist/
+Allow: /*.css$
+Allow: /*.js$
+
+# Disallow crawling of admin, private, and system files
+Disallow: /node_modules/
+Disallow: /*.json$
+Disallow: /src/
+Disallow: /scripts/
+
+# Sitemap location
+Sitemap: https://www.forthandvale.com/sitemap.xml
+
+# Specific rules for major search engines
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 0
+
+User-agent: Googlebot-Image
+Allow: /products/
+Allow: /images/
+Allow: /assets/
+
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 0
+
+User-agent: Slurp
+Allow: /
+Crawl-delay: 0

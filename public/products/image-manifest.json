@@ -1,0 +1,2784 @@
+{
+  "generated": "2025-09-26T20:13:19.440Z",
+  "totalImages": 66,
+  "categories": {
+    "Acessories": 15,
+    "Bag": 25,
+    "Belt": 10,
+    "Wallet": 16
+  },
+  "images": [
+    {
+      "original": "Acessories/Gloves/gloves 1.jpg",
+      "converted": [
+        {
+          "size": "thumbnail",
+          "format": "webp",
+          "path": "Acessories/Gloves/gloves 1_thumb.webp",
+          "sizeBytes": 8920
+        },
+        {
+          "size": "thumbnail",
+          "format": "jpg",
+          "path": "Acessories/Gloves/gloves 1_thumb.jpg",
+          "sizeBytes": 14564
+        },
+        {
+          "size": "detail",
+          "format": "webp",
+          "path": "Acessories/Gloves/gloves 1_detail.webp",
+          "sizeBytes": 14722
+        },
+        {
+          "size": "detail",
+          "format": "jpg",
+          "path": "Acessories/Gloves/gloves 1_detail.jpg",
+          "sizeBytes": 31186
+        },
+        {
+          "size": "hero",
+          "format": "webp",
+          "path": "Acessories/Gloves/gloves 1_hero.webp",
+          "sizeBytes": 13062
+        },
+        {
+          "size": "hero",
+          "format": "jpg",
+          "path": "Acessories/Gloves/gloves 1_hero.jpg",
+          "sizeBytes": 25532
+        }
+      ],
+      "errors": []
+    },
+    {
+      "original": "Acessories/Gloves/gloves 2.jpg",
+      "converted": [
+        {
+          "size": "thumbnail",
+          "format": "webp",
+          "path": "Acessories/Gloves/gloves 2_thumb.webp",
+          "sizeBytes": 7286
+        },
+        {
+          "size": "thumbnail",
+          "format": "jpg",
+          "path": "Acessories/Gloves/gloves 2_thumb.jpg",
+          "sizeBytes": 12508
+        },
+        {
+          "size": "detail",
+          "format": "webp",
+          "path": "Acessories/Gloves/gloves 2_detail.webp",
+          "sizeBytes": 11440
+        },
+        {
+          "size": "detail",
+          "format": "jpg",
+          "path": "Acessories/Gloves/gloves 2_detail.jpg",
+          "sizeBytes": 26551
+        },
+        {
+          "size": "hero",
+          "format": "webp",
+          "path": "Acessories/Gloves/gloves 2_hero.webp",
+          "sizeBytes": 10388
+        },
+        {
+          "size": "hero",
+          "format": "jpg",
+          "path": "Acessories/Gloves/gloves 2_hero.jpg",
+          "sizeBytes": 21730
+        }
+      ],
+      "errors": []
+    },
+    {
+      "original": "Acessories/Gloves/gloves 3.jpg",
+      "converted": [
+        {
+          "size": "thumbnail",
+          "format": "webp",
+          "path": "Acessories/Gloves/gloves 3_thumb.webp",
+          "sizeBytes": 8060
+        },
+        {
+          "size": "thumbnail",
+          "format": "jpg",
+          "path": "Acessories/Gloves/gloves 3_thumb.jpg",
+          "sizeBytes": 13783
+        },
+        {
+          "size": "detail",
+          "format": "webp",
+          "path": "Acessories/Gloves/gloves 3_detail.webp",
+          "sizeBytes": 13238
+        },
+        {
+          "size": "detail",
+          "format": "jpg",
+          "path": "Acessories/Gloves/gloves 3_detail.jpg",
+          "sizeBytes": 30105
+        },
+        {
+          "size": "hero",
+          "format": "webp",
+          "path": "Acessories/Gloves/gloves 3_hero.webp",
+          "sizeBytes": 11590
+        },
+        {
+          "size": "hero",
+          "format": "jpg",
+          "path": "Acessories/Gloves/gloves 3_hero.jpg",
+          "sizeBytes": 24570
+        }
+      ],
+      "errors": []
+    },
+    {
+      "original": "Acessories/Gloves/gloves 4.jpg",
+      "converted": [
+        {
+          "size": "thumbnail",
+          "format": "webp",
+          "path": "Acessories/Gloves/gloves 4_thumb.webp",
+          "sizeBytes": 9738
+        },
+        {
+          "size": "thumbnail",
+          "format": "jpg",
+          "path": "Acessories/Gloves/gloves 4_thumb.jpg",
+          "sizeBytes": 15495
+        },
+        {
+          "size": "detail",
+          "format": "webp",
+          "path": "Acessories/Gloves/gloves 4_detail.webp",
+          "sizeBytes": 16282
+        },
+        {
+          "size": "detail",
+          "format": "jpg",
+          "path": "Acessories/Gloves/gloves 4_detail.jpg",
+          "sizeBytes": 33816
+        },
+        {
+          "size": "hero",
+          "format": "webp",
+          "path": "Acessories/Gloves/gloves 4_hero.webp",
+          "sizeBytes": 14340
+        },
+        {
+          "size": "hero",
+          "format": "jpg",
+          "path": "Acessories/Gloves/gloves 4_hero.jpg",
+          "sizeBytes": 27665
+        }
+      ],
+      "errors": []
+    },
+    {
+      "original": "Acessories/Gloves/gloves 5.jpg",
+      "converted": [
+        {
+          "size": "thumbnail",
+          "format": "webp",
+          "path": "Acessories/Gloves/gloves 5_thumb.webp",
+          "sizeBytes": 8324
+        },
+        {
+          "size": "thumbnail",
+          "format": "jpg",
+          "path": "Acessories/Gloves/gloves 5_thumb.jpg",
+          "sizeBytes": 14556
+        },
+        {
+          "size": "detail",
+          "format": "webp",
+          "path": "Acessories/Gloves/gloves 5_detail.webp",
+          "sizeBytes": 13828
+        },
+        {
+          "size": "detail",
+          "format": "jpg",
+          "path": "Acessories/Gloves/gloves 5_detail.jpg",
+          "sizeBytes": 32304
+        },
+        {
+          "size": "hero",
+          "format": "webp",
+          "path": "Acessories/Gloves/gloves 5_hero.webp",
+          "sizeBytes": 11768
+        },
+        {
+          "size": "hero",
+          "format": "jpg",
+          "path": "Acessories/Gloves/gloves 5_hero.jpg",
+          "sizeBytes": 26301
+        }
+      ],
+      "errors": []
+    },
+    {
+      "original": "Acessories/Jackets/jacket 1.jpg",
+      "converted": [
+        {
+          "size": "thumbnail",
+          "format": "webp",
+          "path": "Acessories/Jackets/jacket 1_thumb.webp",
+          "sizeBytes": 8446
+        },
+        {
+          "size": "thumbnail",
+          "format": "jpg",
+          "path": "Acessories/Jackets/jacket 1_thumb.jpg",
+          "sizeBytes": 14377
+        },
+        {
+          "size": "detail",
+          "format": "webp",
+          "path": "Acessories/Jackets/jacket 1_detail.webp",
+          "sizeBytes": 14104
+        },
+        {
+          "size": "detail",
+          "format": "jpg",
+          "path": "Acessories/Jackets/jacket 1_detail.jpg",
+          "sizeBytes": 31277
+        },
+        {
+          "size": "hero",
+          "format": "webp",
+          "path": "Acessories/Jackets/jacket 1_hero.webp",
+          "sizeBytes": 12332
+        },
+        {
+          "size": "hero",
+          "format": "jpg",
+          "path": "Acessories/Jackets/jacket 1_hero.jpg",
+          "sizeBytes": 25449
+        }
+      ],
+      "errors": []
+    },
+    {
+      "original": "Acessories/Jackets/jacket 2.jpg",
+      "converted": [
+        {
+          "size": "thumbnail",
+          "format": "webp",
+          "path": "Acessories/Jackets/jacket 2_thumb.webp",
+          "sizeBytes": 8298
+        },
+        {
+          "size": "thumbnail",
+          "format": "jpg",
+          "path": "Acessories/Jackets/jacket 2_thumb.jpg",
+          "sizeBytes": 14006
+        },
+        {
+          "size": "detail",
+          "format": "webp",
+          "path": "Acessories/Jackets/jacket 2_detail.webp",
+          "sizeBytes": 14030
+        },
+        {
+          "size": "detail",
+          "format": "jpg",
+          "path": "Acessories/Jackets/jacket 2_detail.jpg",
+          "sizeBytes": 30239
+        },
+        {
+          "size": "hero",
+          "format": "webp",
+          "path": "Acessories/Jackets/jacket 2_hero.webp",
+          "sizeBytes": 12016
+        },
+        {
+          "size": "hero",
+          "format": "jpg",
+          "path": "Acessories/Jackets/jacket 2_hero.jpg",
+          "sizeBytes": 24821
+        }
+      ],
+      "errors": []
+    },
+    {
+      "original": "Acessories/Jackets/jacket 3.jpg",
+      "converted": [
+        {
+          "size": "thumbnail",
+          "format": "webp",
+          "path": "Acessories/Jackets/jacket 3_thumb.webp",
+          "sizeBytes": 8550
+        },
+        {
+          "size": "thumbnail",
+          "format": "jpg",
+          "path": "Acessories/Jackets/jacket 3_thumb.jpg",
+          "sizeBytes": 14845
+        },
+        {
+          "size": "detail",
+          "format": "webp",
+          "path": "Acessories/Jackets/jacket 3_detail.webp",
+          "sizeBytes": 14018
+        },
+        {
+          "size": "detail",
+          "format": "jpg",
+          "path": "Acessories/Jackets/jacket 3_detail.jpg",
+          "sizeBytes": 31691
+        },
+        {
+          "size": "hero",
+          "format": "webp",
+          "path": "Acessories/Jackets/jacket 3_hero.webp",
+          "sizeBytes": 12298
+        },
+        {
+          "size": "hero",
+          "format": "jpg",
+          "path": "Acessories/Jackets/jacket 3_hero.jpg",
+          "sizeBytes": 25988
+        }
+      ],
+      "errors": []
+    },
+    {
+      "original": "Acessories/Jackets/jacket 4.jpg",
+      "converted": [
+        {
+          "size": "thumbnail",
+          "format": "webp",
+          "path": "Acessories/Jackets/jacket 4_thumb.webp",
+          "sizeBytes": 8412
+        },
+        {
+          "size": "thumbnail",
+          "format": "jpg",
+          "path": "Acessories/Jackets/jacket 4_thumb.jpg",
+          "sizeBytes": 14484
+        },
+        {
+          "size": "detail",
+          "format": "webp",
+          "path": "Acessories/Jackets/jacket 4_detail.webp",
+          "sizeBytes": 14126
+        },
+        {
+          "size": "detail",
+          "format": "jpg",
+          "path": "Acessories/Jackets/jacket 4_detail.jpg",
+          "sizeBytes": 31005
+        },
+        {
+          "size": "hero",
+          "format": "webp",
+          "path": "Acessories/Jackets/jacket 4_hero.webp",
+          "sizeBytes": 12296
+        },
+        {
+          "size": "hero",
+          "format": "jpg",
+          "path": "Acessories/Jackets/jacket 4_hero.jpg",
+          "sizeBytes": 25642
+        }
+      ],
+      "errors": []
+    },
+    {
+      "original": "Acessories/Jackets/jacket 5.jpg",
+      "converted": [
+        {
+          "size": "thumbnail",
+          "format": "webp",
+          "path": "Acessories/Jackets/jacket 5_thumb.webp",
+          "sizeBytes": 8460
+        },
+        {
+          "size": "thumbnail",
+          "format": "jpg",
+          "path": "Acessories/Jackets/jacket 5_thumb.jpg",
+          "sizeBytes": 14598
+        },
+        {
+          "size": "detail",
+          "format": "webp",
+          "path": "Acessories/Jackets/jacket 5_detail.webp",
+          "sizeBytes": 14092
+        },
+        {
+          "size": "detail",
+          "format": "jpg",
+          "path": "Acessories/Jackets/jacket 5_detail.jpg",
+          "sizeBytes": 31306
+        },
+        {
+          "size": "hero",
+          "format": "webp",
+          "path": "Acessories/Jackets/jacket 5_hero.webp",
+          "sizeBytes": 12294
+        },
+        {
+          "size": "hero",
+          "format": "jpg",
+          "path": "Acessories/Jackets/jacket 5_hero.jpg",
+          "sizeBytes": 25764
+        }
+      ],
+      "errors": []
+    },
+    {
+      "original": "Acessories/Keychain/kaychain 5.jpg",
+      "converted": [
+        {
+          "size": "thumbnail",
+          "format": "webp",
+          "path": "Acessories/Keychain/kaychain 5_thumb.webp",
+          "sizeBytes": 7138
+        },
+        {
+          "size": "thumbnail",
+          "format": "jpg",
+          "path": "Acessories/Keychain/kaychain 5_thumb.jpg",
+          "sizeBytes": 12530
+        },
+        {
+          "size": "detail",
+          "format": "webp",
+          "path": "Acessories/Keychain/kaychain 5_detail.webp",
+          "sizeBytes": 11146
+        },
+        {
+          "size": "detail",
+          "format": "jpg",
+          "path": "Acessories/Keychain/kaychain 5_detail.jpg",
+          "sizeBytes": 25849
+        },
+        {
+          "size": "hero",
+          "format": "webp",
+          "path": "Acessories/Keychain/kaychain 5_hero.webp",
+          "sizeBytes": 9796
+        },
+        {
+          "size": "hero",
+          "format": "jpg",
+          "path": "Acessories/Keychain/kaychain 5_hero.jpg",
+          "sizeBytes": 21590
+        }
+      ],
+      "errors": []
+    },
+    {
+      "original": "Acessories/Keychain/keychain 1.jpg",
+      "converted": [
+        {
+          "size": "thumbnail",
+          "format": "webp",
+          "path": "Acessories/Keychain/keychain 1_thumb.webp",
+          "sizeBytes": 7460
+        },
+        {
+          "size": "thumbnail",
+          "format": "jpg",
+          "path": "Acessories/Keychain/keychain 1_thumb.jpg",
+          "sizeBytes": 12669
+        },
+        {
+          "size": "detail",
+          "format": "webp",
+          "path": "Acessories/Keychain/keychain 1_detail.webp",
+          "sizeBytes": 11448
+        },
+        {
+          "size": "detail",
+          "format": "jpg",
+          "path": "Acessories/Keychain/keychain 1_detail.jpg",
+          "sizeBytes": 26421
+        },
+        {
+          "size": "hero",
+          "format": "webp",
+          "path": "Acessories/Keychain/keychain 1_hero.webp",
+          "sizeBytes": 10132
+        },
+        {
+          "size": "hero",
+          "format": "jpg",
+          "path": "Acessories/Keychain/keychain 1_hero.jpg",
+          "sizeBytes": 22023
+        }
+      ],
+      "errors": []
+    },
+    {
+      "original": "Acessories/Keychain/keychain 2].jpg",
+      "converted": [
+        {
+          "size": "thumbnail",
+          "format": "webp",
+          "path": "Acessories/Keychain/keychain 2]_thumb.webp",
+          "sizeBytes": 6834
+        },
+        {
+          "size": "thumbnail",
+          "format": "jpg",
+          "path": "Acessories/Keychain/keychain 2]_thumb.jpg",
+          "sizeBytes": 12149
+        },
+        {
+          "size": "detail",
+          "format": "webp",
+          "path": "Acessories/Keychain/keychain 2]_detail.webp",
+          "sizeBytes": 10470
+        },
+        {
+          "size": "detail",
+          "format": "jpg",
+          "path": "Acessories/Keychain/keychain 2]_detail.jpg",
+          "sizeBytes": 25041
+        },
+        {
+          "size": "hero",
+          "format": "webp",
+          "path": "Acessories/Keychain/keychain 2]_hero.webp",
+          "sizeBytes": 9226
+        },
+        {
+          "size": "hero",
+          "format": "jpg",
+          "path": "Acessories/Keychain/keychain 2]_hero.jpg",
+          "sizeBytes": 20861
+        }
+      ],
+      "errors": []
+    },
+    {
+      "original": "Acessories/Keychain/keychain 3.jpg",
+      "converted": [
+        {
+          "size": "thumbnail",
+          "format": "webp",
+          "path": "Acessories/Keychain/keychain 3_thumb.webp",
+          "sizeBytes": 7760
+        },
+        {
+          "size": "thumbnail",
+          "format": "jpg",
+          "path": "Acessories/Keychain/keychain 3_thumb.jpg",
+          "sizeBytes": 12747
+        },
+        {
+          "size": "detail",
+          "format": "webp",
+          "path": "Acessories/Keychain/keychain 3_detail.webp",
+          "sizeBytes": 12166
+        },
+        {
+          "size": "detail",
+          "format": "jpg",
+          "path": "Acessories/Keychain/keychain 3_detail.jpg",
+          "sizeBytes": 26285
+        },
+        {
+          "size": "hero",
+          "format": "webp",
+          "path": "Acessories/Keychain/keychain 3_hero.webp",
+          "sizeBytes": 10728
+        },
+        {
+          "size": "hero",
+          "format": "jpg",
+          "path": "Acessories/Keychain/keychain 3_hero.jpg",
+          "sizeBytes": 22056
+        }
+      ],
+      "errors": []
+    },
+    {
+      "original": "Acessories/Keychain/keychain 4.jpg",
+      "converted": [
+        {
+          "size": "thumbnail",
+          "format": "webp",
+          "path": "Acessories/Keychain/keychain 4_thumb.webp",
+          "sizeBytes": 7568
+        },
+        {
+          "size": "thumbnail",
+          "format": "jpg",
+          "path": "Acessories/Keychain/keychain 4_thumb.jpg",
+          "sizeBytes": 12935
+        },
+        {
+          "size": "detail",
+          "format": "webp",
+          "path": "Acessories/Keychain/keychain 4_detail.webp",
+          "sizeBytes": 11752
+        },
+        {
+          "size": "detail",
+          "format": "jpg",
+          "path": "Acessories/Keychain/keychain 4_detail.jpg",
+          "sizeBytes": 26794
+        },
+        {
+          "size": "hero",
+          "format": "webp",
+          "path": "Acessories/Keychain/keychain 4_hero.webp",
+          "sizeBytes": 10392
+        },
+        {
+          "size": "hero",
+          "format": "jpg",
+          "path": "Acessories/Keychain/keychain 4_hero.jpg",
+          "sizeBytes": 22386
+        }
+      ],
+      "errors": []
+    },
+    {
+      "original": "Bag/Crossbody/crcrossbody 5.jpg",
+      "converted": [
+        {
+          "size": "thumbnail",
+          "format": "webp",
+          "path": "Bag/Crossbody/crcrossbody 5_thumb.webp",
+          "sizeBytes": 8366
+        },
+        {
+          "size": "thumbnail",
+          "format": "jpg",
+          "path": "Bag/Crossbody/crcrossbody 5_thumb.jpg",
+          "sizeBytes": 13541
+        },
+        {
+          "size": "detail",
+          "format": "webp",
+          "path": "Bag/Crossbody/crcrossbody 5_detail.webp",
+          "sizeBytes": 13120
+        },
+        {
+          "size": "detail",
+          "format": "jpg",
+          "path": "Bag/Crossbody/crcrossbody 5_detail.jpg",
+          "sizeBytes": 28533
+        },
+        {
+          "size": "hero",
+          "format": "webp",
+          "path": "Bag/Crossbody/crcrossbody 5_hero.webp",
+          "sizeBytes": 11714
+        },
+        {
+          "size": "hero",
+          "format": "jpg",
+          "path": "Bag/Crossbody/crcrossbody 5_hero.jpg",
+          "sizeBytes": 23283
+        }
+      ],
+      "errors": []
+    },
+    {
+      "original": "Bag/Crossbody/crossbody 1.jpg",
+      "converted": [
+        {
+          "size": "thumbnail",
+          "format": "webp",
+          "path": "Bag/Crossbody/crossbody 1_thumb.webp",
+          "sizeBytes": 9924
+        },
+        {
+          "size": "thumbnail",
+          "format": "jpg",
+          "path": "Bag/Crossbody/crossbody 1_thumb.jpg",
+          "sizeBytes": 15730
+        },
+        {
+          "size": "detail",
+          "format": "webp",
+          "path": "Bag/Crossbody/crossbody 1_detail.webp",
+          "sizeBytes": 16154
+        },
+        {
+          "size": "detail",
+          "format": "jpg",
+          "path": "Bag/Crossbody/crossbody 1_detail.jpg",
+          "sizeBytes": 33960
+        },
+        {
+          "size": "hero",
+          "format": "webp",
+          "path": "Bag/Crossbody/crossbody 1_hero.webp",
+          "sizeBytes": 14224
+        },
+        {
+          "size": "hero",
+          "format": "jpg",
+          "path": "Bag/Crossbody/crossbody 1_hero.jpg",
+          "sizeBytes": 27782
+        }
+      ],
+      "errors": []
+    },
+    {
+      "original": "Bag/Crossbody/crossbody 2.jpg",
+      "converted": [
+        {
+          "size": "thumbnail",
+          "format": "webp",
+          "path": "Bag/Crossbody/crossbody 2_thumb.webp",
+          "sizeBytes": 8220
+        },
+        {
+          "size": "thumbnail",
+          "format": "jpg",
+          "path": "Bag/Crossbody/crossbody 2_thumb.jpg",
+          "sizeBytes": 13717
+        },
+        {
+          "size": "detail",
+          "format": "webp",
+          "path": "Bag/Crossbody/crossbody 2_detail.webp",
+          "sizeBytes": 13258
+        },
+        {
+          "size": "detail",
+          "format": "jpg",
+          "path": "Bag/Crossbody/crossbody 2_detail.jpg",
+          "sizeBytes": 29343
+        },
+        {
+          "size": "hero",
+          "format": "webp",
+          "path": "Bag/Crossbody/crossbody 2_hero.webp",
+          "sizeBytes": 11530
+        },
+        {
+          "size": "hero",
+          "format": "jpg",
+          "path": "Bag/Crossbody/crossbody 2_hero.jpg",
+          "sizeBytes": 24073
+        }
+      ],
+      "errors": []
+    },
+    {
+      "original": "Bag/Crossbody/crossbody 3.jpg",
+      "converted": [
+        {
+          "size": "thumbnail",
+          "format": "webp",
+          "path": "Bag/Crossbody/crossbody 3_thumb.webp",
+          "sizeBytes": 10098
+        },
+        {
+          "size": "thumbnail",
+          "format": "jpg",
+          "path": "Bag/Crossbody/crossbody 3_thumb.jpg",
+          "sizeBytes": 15901
+        },
+        {
+          "size": "detail",
+          "format": "webp",
+          "path": "Bag/Crossbody/crossbody 3_detail.webp",
+          "sizeBytes": 17766
+        },
+        {
+          "size": "detail",
+          "format": "jpg",
+          "path": "Bag/Crossbody/crossbody 3_detail.jpg",
+          "sizeBytes": 36487
+        },
+        {
+          "size": "hero",
+          "format": "webp",
+          "path": "Bag/Crossbody/crossbody 3_hero.webp",
+          "sizeBytes": 15384
+        },
+        {
+          "size": "hero",
+          "format": "jpg",
+          "path": "Bag/Crossbody/crossbody 3_hero.jpg",
+          "sizeBytes": 29462
+        }
+      ],
+      "errors": []
+    },
+    {
+      "original": "Bag/Crossbody/crossbody 4.jpg",
+      "converted": [
+        {
+          "size": "thumbnail",
+          "format": "webp",
+          "path": "Bag/Crossbody/crossbody 4_thumb.webp",
+          "sizeBytes": 8404
+        },
+        {
+          "size": "thumbnail",
+          "format": "jpg",
+          "path": "Bag/Crossbody/crossbody 4_thumb.jpg",
+          "sizeBytes": 13707
+        },
+        {
+          "size": "detail",
+          "format": "webp",
+          "path": "Bag/Crossbody/crossbody 4_detail.webp",
+          "sizeBytes": 13454
+        },
+        {
+          "size": "detail",
+          "format": "jpg",
+          "path": "Bag/Crossbody/crossbody 4_detail.jpg",
+          "sizeBytes": 29470
+        },
+        {
+          "size": "hero",
+          "format": "webp",
+          "path": "Bag/Crossbody/crossbody 4_hero.webp",
+          "sizeBytes": 12004
+        },
+        {
+          "size": "hero",
+          "format": "jpg",
+          "path": "Bag/Crossbody/crossbody 4_hero.jpg",
+          "sizeBytes": 23991
+        }
+      ],
+      "errors": []
+    },
+    {
+      "original": "Bag/Duffel/duffel 1.jpg",
+      "converted": [
+        {
+          "size": "thumbnail",
+          "format": "webp",
+          "path": "Bag/Duffel/duffel 1_thumb.webp",
+          "sizeBytes": 8974
+        },
+        {
+          "size": "thumbnail",
+          "format": "jpg",
+          "path": "Bag/Duffel/duffel 1_thumb.jpg",
+          "sizeBytes": 14683
+        },
+        {
+          "size": "detail",
+          "format": "webp",
+          "path": "Bag/Duffel/duffel 1_detail.webp",
+          "sizeBytes": 14408
+        },
+        {
+          "size": "detail",
+          "format": "jpg",
+          "path": "Bag/Duffel/duffel 1_detail.jpg",
+          "sizeBytes": 31309
+        },
+        {
+          "size": "hero",
+          "format": "webp",
+          "path": "Bag/Duffel/duffel 1_hero.webp",
+          "sizeBytes": 12732
+        },
+        {
+          "size": "hero",
+          "format": "jpg",
+          "path": "Bag/Duffel/duffel 1_hero.jpg",
+          "sizeBytes": 25747
+        }
+      ],
+      "errors": []
+    },
+    {
+      "original": "Bag/Duffel/duffel 2.jpg",
+      "converted": [
+        {
+          "size": "thumbnail",
+          "format": "webp",
+          "path": "Bag/Duffel/duffel 2_thumb.webp",
+          "sizeBytes": 8548
+        },
+        {
+          "size": "thumbnail",
+          "format": "jpg",
+          "path": "Bag/Duffel/duffel 2_thumb.jpg",
+          "sizeBytes": 14153
+        },
+        {
+          "size": "detail",
+          "format": "webp",
+          "path": "Bag/Duffel/duffel 2_detail.webp",
+          "sizeBytes": 13834
+        },
+        {
+          "size": "detail",
+          "format": "jpg",
+          "path": "Bag/Duffel/duffel 2_detail.jpg",
+          "sizeBytes": 29559
+        },
+        {
+          "size": "hero",
+          "format": "webp",
+          "path": "Bag/Duffel/duffel 2_hero.webp",
+          "sizeBytes": 12170
+        },
+        {
+          "size": "hero",
+          "format": "jpg",
+          "path": "Bag/Duffel/duffel 2_hero.jpg",
+          "sizeBytes": 24325
+        }
+      ],
+      "errors": []
+    },
+    {
+      "original": "Bag/Duffel/duffel 3.jpg",
+      "converted": [
+        {
+          "size": "thumbnail",
+          "format": "webp",
+          "path": "Bag/Duffel/duffel 3_thumb.webp",
+          "sizeBytes": 8690
+        },
+        {
+          "size": "thumbnail",
+          "format": "jpg",
+          "path": "Bag/Duffel/duffel 3_thumb.jpg",
+          "sizeBytes": 14277
+        },
+        {
+          "size": "detail",
+          "format": "webp",
+          "path": "Bag/Duffel/duffel 3_detail.webp",
+          "sizeBytes": 14046
+        },
+        {
+          "size": "detail",
+          "format": "jpg",
+          "path": "Bag/Duffel/duffel 3_detail.jpg",
+          "sizeBytes": 30417
+        },
+        {
+          "size": "hero",
+          "format": "webp",
+          "path": "Bag/Duffel/duffel 3_hero.webp",
+          "sizeBytes": 12544
+        },
+        {
+          "size": "hero",
+          "format": "jpg",
+          "path": "Bag/Duffel/duffel 3_hero.jpg",
+          "sizeBytes": 24882
+        }
+      ],
+      "errors": []
+    },
+    {
+      "original": "Bag/Duffel/duffel 4.jpg",
+      "converted": [
+        {
+          "size": "thumbnail",
+          "format": "webp",
+          "path": "Bag/Duffel/duffel 4_thumb.webp",
+          "sizeBytes": 9666
+        },
+        {
+          "size": "thumbnail",
+          "format": "jpg",
+          "path": "Bag/Duffel/duffel 4_thumb.jpg",
+          "sizeBytes": 15265
+        },
+        {
+          "size": "detail",
+          "format": "webp",
+          "path": "Bag/Duffel/duffel 4_detail.webp",
+          "sizeBytes": 15998
+        },
+        {
+          "size": "detail",
+          "format": "jpg",
+          "path": "Bag/Duffel/duffel 4_detail.jpg",
+          "sizeBytes": 33032
+        },
+        {
+          "size": "hero",
+          "format": "webp",
+          "path": "Bag/Duffel/duffel 4_hero.webp",
+          "sizeBytes": 14158
+        },
+        {
+          "size": "hero",
+          "format": "jpg",
+          "path": "Bag/Duffel/duffel 4_hero.jpg",
+          "sizeBytes": 27188
+        }
+      ],
+      "errors": []
+    },
+    {
+      "original": "Bag/Duffel/duffel 5.jpg",
+      "converted": [
+        {
+          "size": "thumbnail",
+          "format": "webp",
+          "path": "Bag/Duffel/duffel 5_thumb.webp",
+          "sizeBytes": 8618
+        },
+        {
+          "size": "thumbnail",
+          "format": "jpg",
+          "path": "Bag/Duffel/duffel 5_thumb.jpg",
+          "sizeBytes": 14144
+        },
+        {
+          "size": "detail",
+          "format": "webp",
+          "path": "Bag/Duffel/duffel 5_detail.webp",
+          "sizeBytes": 14056
+        },
+        {
+          "size": "detail",
+          "format": "jpg",
+          "path": "Bag/Duffel/duffel 5_detail.jpg",
+          "sizeBytes": 30069
+        },
+        {
+          "size": "hero",
+          "format": "webp",
+          "path": "Bag/Duffel/duffel 5_hero.webp",
+          "sizeBytes": 12174
+        },
+        {
+          "size": "hero",
+          "format": "jpg",
+          "path": "Bag/Duffel/duffel 5_hero.jpg",
+          "sizeBytes": 24624
+        }
+      ],
+      "errors": []
+    },
+    {
+      "original": "Bag/Laptop/laptop 1.jpg",
+      "converted": [
+        {
+          "size": "thumbnail",
+          "format": "webp",
+          "path": "Bag/Laptop/laptop 1_thumb.webp",
+          "sizeBytes": 9180
+        },
+        {
+          "size": "thumbnail",
+          "format": "jpg",
+          "path": "Bag/Laptop/laptop 1_thumb.jpg",
+          "sizeBytes": 15041
+        },
+        {
+          "size": "detail",
+          "format": "webp",
+          "path": "Bag/Laptop/laptop 1_detail.webp",
+          "sizeBytes": 15096
+        },
+        {
+          "size": "detail",
+          "format": "jpg",
+          "path": "Bag/Laptop/laptop 1_detail.jpg",
+          "sizeBytes": 32285
+        },
+        {
+          "size": "hero",
+          "format": "webp",
+          "path": "Bag/Laptop/laptop 1_hero.webp",
+          "sizeBytes": 13500
+        },
+        {
+          "size": "hero",
+          "format": "jpg",
+          "path": "Bag/Laptop/laptop 1_hero.jpg",
+          "sizeBytes": 26448
+        }
+      ],
+      "errors": []
+    },
+    {
+      "original": "Bag/Laptop/laptop 2.jpg",
+      "converted": [
+        {
+          "size": "thumbnail",
+          "format": "webp",
+          "path": "Bag/Laptop/laptop 2_thumb.webp",
+          "sizeBytes": 8630
+        },
+        {
+          "size": "thumbnail",
+          "format": "jpg",
+          "path": "Bag/Laptop/laptop 2_thumb.jpg",
+          "sizeBytes": 14003
+        },
+        {
+          "size": "detail",
+          "format": "webp",
+          "path": "Bag/Laptop/laptop 2_detail.webp",
+          "sizeBytes": 13778
+        },
+        {
+          "size": "detail",
+          "format": "jpg",
+          "path": "Bag/Laptop/laptop 2_detail.jpg",
+          "sizeBytes": 29496
+        },
+        {
+          "size": "hero",
+          "format": "webp",
+          "path": "Bag/Laptop/laptop 2_hero.webp",
+          "sizeBytes": 12286
+        },
+        {
+          "size": "hero",
+          "format": "jpg",
+          "path": "Bag/Laptop/laptop 2_hero.jpg",
+          "sizeBytes": 24239
+        }
+      ],
+      "errors": []
+    },
+    {
+      "original": "Bag/Laptop/laptop 3.jpg",
+      "converted": [
+        {
+          "size": "thumbnail",
+          "format": "webp",
+          "path": "Bag/Laptop/laptop 3_thumb.webp",
+          "sizeBytes": 8786
+        },
+        {
+          "size": "thumbnail",
+          "format": "jpg",
+          "path": "Bag/Laptop/laptop 3_thumb.jpg",
+          "sizeBytes": 14338
+        },
+        {
+          "size": "detail",
+          "format": "webp",
+          "path": "Bag/Laptop/laptop 3_detail.webp",
+          "sizeBytes": 14294
+        },
+        {
+          "size": "detail",
+          "format": "jpg",
+          "path": "Bag/Laptop/laptop 3_detail.jpg",
+          "sizeBytes": 30473
+        },
+        {
+          "size": "hero",
+          "format": "webp",
+          "path": "Bag/Laptop/laptop 3_hero.webp",
+          "sizeBytes": 12530
+        },
+        {
+          "size": "hero",
+          "format": "jpg",
+          "path": "Bag/Laptop/laptop 3_hero.jpg",
+          "sizeBytes": 25143
+        }
+      ],
+      "errors": []
+    },
+    {
+      "original": "Bag/Laptop/laptop 4.jpg",
+      "converted": [
+        {
+          "size": "thumbnail",
+          "format": "webp",
+          "path": "Bag/Laptop/laptop 4_thumb.webp",
+          "sizeBytes": 9646
+        },
+        {
+          "size": "thumbnail",
+          "format": "jpg",
+          "path": "Bag/Laptop/laptop 4_thumb.jpg",
+          "sizeBytes": 15348
+        },
+        {
+          "size": "detail",
+          "format": "webp",
+          "path": "Bag/Laptop/laptop 4_detail.webp",
+          "sizeBytes": 15892
+        },
+        {
+          "size": "detail",
+          "format": "jpg",
+          "path": "Bag/Laptop/laptop 4_detail.jpg",
+          "sizeBytes": 33077
+        },
+        {
+          "size": "hero",
+          "format": "webp",
+          "path": "Bag/Laptop/laptop 4_hero.webp",
+          "sizeBytes": 14034
+        },
+        {
+          "size": "hero",
+          "format": "jpg",
+          "path": "Bag/Laptop/laptop 4_hero.jpg",
+          "sizeBytes": 27092
+        }
+      ],
+      "errors": []
+    },
+    {
+      "original": "Bag/Laptop/laptop 5.jpg",
+      "converted": [
+        {
+          "size": "thumbnail",
+          "format": "webp",
+          "path": "Bag/Laptop/laptop 5_thumb.webp",
+          "sizeBytes": 8806
+        },
+        {
+          "size": "thumbnail",
+          "format": "jpg",
+          "path": "Bag/Laptop/laptop 5_thumb.jpg",
+          "sizeBytes": 14440
+        },
+        {
+          "size": "detail",
+          "format": "webp",
+          "path": "Bag/Laptop/laptop 5_detail.webp",
+          "sizeBytes": 14172
+        },
+        {
+          "size": "detail",
+          "format": "jpg",
+          "path": "Bag/Laptop/laptop 5_detail.jpg",
+          "sizeBytes": 30519
+        },
+        {
+          "size": "hero",
+          "format": "webp",
+          "path": "Bag/Laptop/laptop 5_hero.webp",
+          "sizeBytes": 12444
+        },
+        {
+          "size": "hero",
+          "format": "jpg",
+          "path": "Bag/Laptop/laptop 5_hero.jpg",
+          "sizeBytes": 25136
+        }
+      ],
+      "errors": []
+    },
+    {
+      "original": "Bag/Tote/handbag 1.jpg",
+      "converted": [
+        {
+          "size": "thumbnail",
+          "format": "webp",
+          "path": "Bag/Tote/handbag 1_thumb.webp",
+          "sizeBytes": 8750
+        },
+        {
+          "size": "thumbnail",
+          "format": "jpg",
+          "path": "Bag/Tote/handbag 1_thumb.jpg",
+          "sizeBytes": 14637
+        },
+        {
+          "size": "detail",
+          "format": "webp",
+          "path": "Bag/Tote/handbag 1_detail.webp",
+          "sizeBytes": 14338
+        },
+        {
+          "size": "detail",
+          "format": "jpg",
+          "path": "Bag/Tote/handbag 1_detail.jpg",
+          "sizeBytes": 31807
+        },
+        {
+          "size": "hero",
+          "format": "webp",
+          "path": "Bag/Tote/handbag 1_hero.webp",
+          "sizeBytes": 12664
+        },
+        {
+          "size": "hero",
+          "format": "jpg",
+          "path": "Bag/Tote/handbag 1_hero.jpg",
+          "sizeBytes": 26056
+        }
+      ],
+      "errors": []
+    },
+    {
+      "original": "Bag/Tote/handbag 2.jpg",
+      "converted": [
+        {
+          "size": "thumbnail",
+          "format": "webp",
+          "path": "Bag/Tote/handbag 2_thumb.webp",
+          "sizeBytes": 8626
+        },
+        {
+          "size": "thumbnail",
+          "format": "jpg",
+          "path": "Bag/Tote/handbag 2_thumb.jpg",
+          "sizeBytes": 14205
+        },
+        {
+          "size": "detail",
+          "format": "webp",
+          "path": "Bag/Tote/handbag 2_detail.webp",
+          "sizeBytes": 14006
+        },
+        {
+          "size": "detail",
+          "format": "jpg",
+          "path": "Bag/Tote/handbag 2_detail.jpg",
+          "sizeBytes": 30271
+        },
+        {
+          "size": "hero",
+          "format": "webp",
+          "path": "Bag/Tote/handbag 2_hero.webp",
+          "sizeBytes": 12322
+        },
+        {
+          "size": "hero",
+          "format": "jpg",
+          "path": "Bag/Tote/handbag 2_hero.jpg",
+          "sizeBytes": 24989
+        }
+      ],
+      "errors": []
+    },
+    {
+      "original": "Bag/Tote/handbag 3.jpg",
+      "converted": [
+        {
+          "size": "thumbnail",
+          "format": "webp",
+          "path": "Bag/Tote/handbag 3_thumb.webp",
+          "sizeBytes": 9300
+        },
+        {
+          "size": "thumbnail",
+          "format": "jpg",
+          "path": "Bag/Tote/handbag 3_thumb.jpg",
+          "sizeBytes": 14736
+        },
+        {
+          "size": "detail",
+          "format": "webp",
+          "path": "Bag/Tote/handbag 3_detail.webp",
+          "sizeBytes": 14814
+        },
+        {
+          "size": "detail",
+          "format": "jpg",
+          "path": "Bag/Tote/handbag 3_detail.jpg",
+          "sizeBytes": 31857
+        },
+        {
+          "size": "hero",
+          "format": "webp",
+          "path": "Bag/Tote/handbag 3_hero.webp",
+          "sizeBytes": 13166
+        },
+        {
+          "size": "hero",
+          "format": "jpg",
+          "path": "Bag/Tote/handbag 3_hero.jpg",
+          "sizeBytes": 26161
+        }
+      ],
+      "errors": []
+    },
+    {
+      "original": "Bag/Tote/handbag 4.jpg",
+      "converted": [
+        {
+          "size": "thumbnail",
+          "format": "webp",
+          "path": "Bag/Tote/handbag 4_thumb.webp",
+          "sizeBytes": 9754
+        },
+        {
+          "size": "thumbnail",
+          "format": "jpg",
+          "path": "Bag/Tote/handbag 4_thumb.jpg",
+          "sizeBytes": 15342
+        },
+        {
+          "size": "detail",
+          "format": "webp",
+          "path": "Bag/Tote/handbag 4_detail.webp",
+          "sizeBytes": 16072
+        },
+        {
+          "size": "detail",
+          "format": "jpg",
+          "path": "Bag/Tote/handbag 4_detail.jpg",
+          "sizeBytes": 33122
+        },
+        {
+          "size": "hero",
+          "format": "webp",
+          "path": "Bag/Tote/handbag 4_hero.webp",
+          "sizeBytes": 14182
+        },
+        {
+          "size": "hero",
+          "format": "jpg",
+          "path": "Bag/Tote/handbag 4_hero.jpg",
+          "sizeBytes": 27180
+        }
+      ],
+      "errors": []
+    },
+    {
+      "original": "Bag/Tote/handbag 5.jpg",
+      "converted": [
+        {
+          "size": "thumbnail",
+          "format": "webp",
+          "path": "Bag/Tote/handbag 5_thumb.webp",
+          "sizeBytes": 8812
+        },
+        {
+          "size": "thumbnail",
+          "format": "jpg",
+          "path": "Bag/Tote/handbag 5_thumb.jpg",
+          "sizeBytes": 14699
+        },
+        {
+          "size": "detail",
+          "format": "webp",
+          "path": "Bag/Tote/handbag 5_detail.webp",
+          "sizeBytes": 14382
+        },
+        {
+          "size": "detail",
+          "format": "jpg",
+          "path": "Bag/Tote/handbag 5_detail.jpg",
+          "sizeBytes": 31391
+        },
+        {
+          "size": "hero",
+          "format": "webp",
+          "path": "Bag/Tote/handbag 5_hero.webp",
+          "sizeBytes": 12748
+        },
+        {
+          "size": "hero",
+          "format": "jpg",
+          "path": "Bag/Tote/handbag 5_hero.jpg",
+          "sizeBytes": 25850
+        }
+      ],
+      "errors": []
+    },
+    {
+      "original": "Bag/backpack/backpack 1.jpg",
+      "converted": [
+        {
+          "size": "thumbnail",
+          "format": "webp",
+          "path": "Bag/backpack/backpack 1_thumb.webp",
+          "sizeBytes": 8448
+        },
+        {
+          "size": "thumbnail",
+          "format": "jpg",
+          "path": "Bag/backpack/backpack 1_thumb.jpg",
+          "sizeBytes": 14289
+        },
+        {
+          "size": "detail",
+          "format": "webp",
+          "path": "Bag/backpack/backpack 1_detail.webp",
+          "sizeBytes": 13950
+        },
+        {
+          "size": "detail",
+          "format": "jpg",
+          "path": "Bag/backpack/backpack 1_detail.jpg",
+          "sizeBytes": 30565
+        },
+        {
+          "size": "hero",
+          "format": "webp",
+          "path": "Bag/backpack/backpack 1_hero.webp",
+          "sizeBytes": 12214
+        },
+        {
+          "size": "hero",
+          "format": "jpg",
+          "path": "Bag/backpack/backpack 1_hero.jpg",
+          "sizeBytes": 25210
+        }
+      ],
+      "errors": []
+    },
+    {
+      "original": "Bag/backpack/backpack 2.jpg",
+      "converted": [
+        {
+          "size": "thumbnail",
+          "format": "webp",
+          "path": "Bag/backpack/backpack 2_thumb.webp",
+          "sizeBytes": 8342
+        },
+        {
+          "size": "thumbnail",
+          "format": "jpg",
+          "path": "Bag/backpack/backpack 2_thumb.jpg",
+          "sizeBytes": 14290
+        },
+        {
+          "size": "detail",
+          "format": "webp",
+          "path": "Bag/backpack/backpack 2_detail.webp",
+          "sizeBytes": 14042
+        },
+        {
+          "size": "detail",
+          "format": "jpg",
+          "path": "Bag/backpack/backpack 2_detail.jpg",
+          "sizeBytes": 30837
+        },
+        {
+          "size": "hero",
+          "format": "webp",
+          "path": "Bag/backpack/backpack 2_hero.webp",
+          "sizeBytes": 12286
+        },
+        {
+          "size": "hero",
+          "format": "jpg",
+          "path": "Bag/backpack/backpack 2_hero.jpg",
+          "sizeBytes": 25460
+        }
+      ],
+      "errors": []
+    },
+    {
+      "original": "Bag/backpack/backpack 3.jpg",
+      "converted": [
+        {
+          "size": "thumbnail",
+          "format": "webp",
+          "path": "Bag/backpack/backpack 3_thumb.webp",
+          "sizeBytes": 9516
+        },
+        {
+          "size": "thumbnail",
+          "format": "jpg",
+          "path": "Bag/backpack/backpack 3_thumb.jpg",
+          "sizeBytes": 15406
+        },
+        {
+          "size": "detail",
+          "format": "webp",
+          "path": "Bag/backpack/backpack 3_detail.webp",
+          "sizeBytes": 16160
+        },
+        {
+          "size": "detail",
+          "format": "jpg",
+          "path": "Bag/backpack/backpack 3_detail.jpg",
+          "sizeBytes": 33142
+        },
+        {
+          "size": "hero",
+          "format": "webp",
+          "path": "Bag/backpack/backpack 3_hero.webp",
+          "sizeBytes": 14022
+        },
+        {
+          "size": "hero",
+          "format": "jpg",
+          "path": "Bag/backpack/backpack 3_hero.jpg",
+          "sizeBytes": 27345
+        }
+      ],
+      "errors": []
+    },
+    {
+      "original": "Bag/backpack/backpack 4.jpg",
+      "converted": [
+        {
+          "size": "thumbnail",
+          "format": "webp",
+          "path": "Bag/backpack/backpack 4_thumb.webp",
+          "sizeBytes": 8918
+        },
+        {
+          "size": "thumbnail",
+          "format": "jpg",
+          "path": "Bag/backpack/backpack 4_thumb.jpg",
+          "sizeBytes": 14883
+        },
+        {
+          "size": "detail",
+          "format": "webp",
+          "path": "Bag/backpack/backpack 4_detail.webp",
+          "sizeBytes": 14656
+        },
+        {
+          "size": "detail",
+          "format": "jpg",
+          "path": "Bag/backpack/backpack 4_detail.jpg",
+          "sizeBytes": 32080
+        },
+        {
+          "size": "hero",
+          "format": "webp",
+          "path": "Bag/backpack/backpack 4_hero.webp",
+          "sizeBytes": 12924
+        },
+        {
+          "size": "hero",
+          "format": "jpg",
+          "path": "Bag/backpack/backpack 4_hero.jpg",
+          "sizeBytes": 26195
+        }
+      ],
+      "errors": []
+    },
+    {
+      "original": "Bag/backpack/bacpack 5.jpg",
+      "converted": [
+        {
+          "size": "thumbnail",
+          "format": "webp",
+          "path": "Bag/backpack/bacpack 5_thumb.webp",
+          "sizeBytes": 8494
+        },
+        {
+          "size": "thumbnail",
+          "format": "jpg",
+          "path": "Bag/backpack/bacpack 5_thumb.jpg",
+          "sizeBytes": 14188
+        },
+        {
+          "size": "detail",
+          "format": "webp",
+          "path": "Bag/backpack/bacpack 5_detail.webp",
+          "sizeBytes": 13552
+        },
+        {
+          "size": "detail",
+          "format": "jpg",
+          "path": "Bag/backpack/bacpack 5_detail.jpg",
+          "sizeBytes": 30292
+        },
+        {
+          "size": "hero",
+          "format": "webp",
+          "path": "Bag/backpack/bacpack 5_hero.webp",
+          "sizeBytes": 11978
+        },
+        {
+          "size": "hero",
+          "format": "jpg",
+          "path": "Bag/backpack/bacpack 5_hero.jpg",
+          "sizeBytes": 24882
+        }
+      ],
+      "errors": []
+    },
+    {
+      "original": "Belt/Braided/braid 1.jpg",
+      "converted": [
+        {
+          "size": "thumbnail",
+          "format": "webp",
+          "path": "Belt/Braided/braid 1_thumb.webp",
+          "sizeBytes": 10620
+        },
+        {
+          "size": "thumbnail",
+          "format": "jpg",
+          "path": "Belt/Braided/braid 1_thumb.jpg",
+          "sizeBytes": 17323
+        },
+        {
+          "size": "detail",
+          "format": "webp",
+          "path": "Belt/Braided/braid 1_detail.webp",
+          "sizeBytes": 18464
+        },
+        {
+          "size": "detail",
+          "format": "jpg",
+          "path": "Belt/Braided/braid 1_detail.jpg",
+          "sizeBytes": 38430
+        },
+        {
+          "size": "hero",
+          "format": "webp",
+          "path": "Belt/Braided/braid 1_hero.webp",
+          "sizeBytes": 16052
+        },
+        {
+          "size": "hero",
+          "format": "jpg",
+          "path": "Belt/Braided/braid 1_hero.jpg",
+          "sizeBytes": 31654
+        }
+      ],
+      "errors": []
+    },
+    {
+      "original": "Belt/Braided/braid 2.jpg",
+      "converted": [
+        {
+          "size": "thumbnail",
+          "format": "webp",
+          "path": "Belt/Braided/braid 2_thumb.webp",
+          "sizeBytes": 9132
+        },
+        {
+          "size": "thumbnail",
+          "format": "jpg",
+          "path": "Belt/Braided/braid 2_thumb.jpg",
+          "sizeBytes": 15337
+        },
+        {
+          "size": "detail",
+          "format": "webp",
+          "path": "Belt/Braided/braid 2_detail.webp",
+          "sizeBytes": 15444
+        },
+        {
+          "size": "detail",
+          "format": "jpg",
+          "path": "Belt/Braided/braid 2_detail.jpg",
+          "sizeBytes": 32342
+        },
+        {
+          "size": "hero",
+          "format": "webp",
+          "path": "Belt/Braided/braid 2_hero.webp",
+          "sizeBytes": 13474
+        },
+        {
+          "size": "hero",
+          "format": "jpg",
+          "path": "Belt/Braided/braid 2_hero.jpg",
+          "sizeBytes": 26683
+        }
+      ],
+      "errors": []
+    },
+    {
+      "original": "Belt/Braided/braid 3.jpg",
+      "converted": [
+        {
+          "size": "thumbnail",
+          "format": "webp",
+          "path": "Belt/Braided/braid 3_thumb.webp",
+          "sizeBytes": 10338
+        },
+        {
+          "size": "thumbnail",
+          "format": "jpg",
+          "path": "Belt/Braided/braid 3_thumb.jpg",
+          "sizeBytes": 16965
+        },
+        {
+          "size": "detail",
+          "format": "webp",
+          "path": "Belt/Braided/braid 3_detail.webp",
+          "sizeBytes": 17724
+        },
+        {
+          "size": "detail",
+          "format": "jpg",
+          "path": "Belt/Braided/braid 3_detail.jpg",
+          "sizeBytes": 36859
+        },
+        {
+          "size": "hero",
+          "format": "webp",
+          "path": "Belt/Braided/braid 3_hero.webp",
+          "sizeBytes": 15380
+        },
+        {
+          "size": "hero",
+          "format": "jpg",
+          "path": "Belt/Braided/braid 3_hero.jpg",
+          "sizeBytes": 30300
+        }
+      ],
+      "errors": []
+    },
+    {
+      "original": "Belt/Braided/braid 4.jpg",
+      "converted": [
+        {
+          "size": "thumbnail",
+          "format": "webp",
+          "path": "Belt/Braided/braid 4_thumb.webp",
+          "sizeBytes": 11252
+        },
+        {
+          "size": "thumbnail",
+          "format": "jpg",
+          "path": "Belt/Braided/braid 4_thumb.jpg",
+          "sizeBytes": 17849
+        },
+        {
+          "size": "detail",
+          "format": "webp",
+          "path": "Belt/Braided/braid 4_detail.webp",
+          "sizeBytes": 19904
+        },
+        {
+          "size": "detail",
+          "format": "jpg",
+          "path": "Belt/Braided/braid 4_detail.jpg",
+          "sizeBytes": 39372
+        },
+        {
+          "size": "hero",
+          "format": "webp",
+          "path": "Belt/Braided/braid 4_hero.webp",
+          "sizeBytes": 17066
+        },
+        {
+          "size": "hero",
+          "format": "jpg",
+          "path": "Belt/Braided/braid 4_hero.jpg",
+          "sizeBytes": 32429
+        }
+      ],
+      "errors": []
+    },
+    {
+      "original": "Belt/Braided/braid 5.jpg",
+      "converted": [
+        {
+          "size": "thumbnail",
+          "format": "webp",
+          "path": "Belt/Braided/braid 5_thumb.webp",
+          "sizeBytes": 9478
+        },
+        {
+          "size": "thumbnail",
+          "format": "jpg",
+          "path": "Belt/Braided/braid 5_thumb.jpg",
+          "sizeBytes": 15787
+        },
+        {
+          "size": "detail",
+          "format": "webp",
+          "path": "Belt/Braided/braid 5_detail.webp",
+          "sizeBytes": 16190
+        },
+        {
+          "size": "detail",
+          "format": "jpg",
+          "path": "Belt/Braided/braid 5_detail.jpg",
+          "sizeBytes": 33826
+        },
+        {
+          "size": "hero",
+          "format": "webp",
+          "path": "Belt/Braided/braid 5_hero.webp",
+          "sizeBytes": 14228
+        },
+        {
+          "size": "hero",
+          "format": "jpg",
+          "path": "Belt/Braided/braid 5_hero.jpg",
+          "sizeBytes": 27997
+        }
+      ],
+      "errors": []
+    },
+    {
+      "original": "Belt/Formal/formal 1.jpg",
+      "converted": [
+        {
+          "size": "thumbnail",
+          "format": "webp",
+          "path": "Belt/Formal/formal 1_thumb.webp",
+          "sizeBytes": 8752
+        },
+        {
+          "size": "thumbnail",
+          "format": "jpg",
+          "path": "Belt/Formal/formal 1_thumb.jpg",
+          "sizeBytes": 14540
+        },
+        {
+          "size": "detail",
+          "format": "webp",
+          "path": "Belt/Formal/formal 1_detail.webp",
+          "sizeBytes": 14754
+        },
+        {
+          "size": "detail",
+          "format": "jpg",
+          "path": "Belt/Formal/formal 1_detail.jpg",
+          "sizeBytes": 31356
+        },
+        {
+          "size": "hero",
+          "format": "webp",
+          "path": "Belt/Formal/formal 1_hero.webp",
+          "sizeBytes": 12968
+        },
+        {
+          "size": "hero",
+          "format": "jpg",
+          "path": "Belt/Formal/formal 1_hero.jpg",
+          "sizeBytes": 25920
+        }
+      ],
+      "errors": []
+    },
+    {
+      "original": "Belt/Formal/formal 2.jpg",
+      "converted": [
+        {
+          "size": "thumbnail",
+          "format": "webp",
+          "path": "Belt/Formal/formal 2_thumb.webp",
+          "sizeBytes": 7700
+        },
+        {
+          "size": "thumbnail",
+          "format": "jpg",
+          "path": "Belt/Formal/formal 2_thumb.jpg",
+          "sizeBytes": 13300
+        },
+        {
+          "size": "detail",
+          "format": "webp",
+          "path": "Belt/Formal/formal 2_detail.webp",
+          "sizeBytes": 12640
+        },
+        {
+          "size": "detail",
+          "format": "jpg",
+          "path": "Belt/Formal/formal 2_detail.jpg",
+          "sizeBytes": 28149
+        },
+        {
+          "size": "hero",
+          "format": "webp",
+          "path": "Belt/Formal/formal 2_hero.webp",
+          "sizeBytes": 11170
+        },
+        {
+          "size": "hero",
+          "format": "jpg",
+          "path": "Belt/Formal/formal 2_hero.jpg",
+          "sizeBytes": 23283
+        }
+      ],
+      "errors": []
+    },
+    {
+      "original": "Belt/Formal/formal 3.jpg",
+      "converted": [
+        {
+          "size": "thumbnail",
+          "format": "webp",
+          "path": "Belt/Formal/formal 3_thumb.webp",
+          "sizeBytes": 8382
+        },
+        {
+          "size": "thumbnail",
+          "format": "jpg",
+          "path": "Belt/Formal/formal 3_thumb.jpg",
+          "sizeBytes": 14038
+        },
+        {
+          "size": "detail",
+          "format": "webp",
+          "path": "Belt/Formal/formal 3_detail.webp",
+          "sizeBytes": 13780
+        },
+        {
+          "size": "detail",
+          "format": "jpg",
+          "path": "Belt/Formal/formal 3_detail.jpg",
+          "sizeBytes": 29835
+        },
+        {
+          "size": "hero",
+          "format": "webp",
+          "path": "Belt/Formal/formal 3_hero.webp",
+          "sizeBytes": 12158
+        },
+        {
+          "size": "hero",
+          "format": "jpg",
+          "path": "Belt/Formal/formal 3_hero.jpg",
+          "sizeBytes": 24882
+        }
+      ],
+      "errors": []
+    },
+    {
+      "original": "Belt/Formal/formal 4.jpg",
+      "converted": [
+        {
+          "size": "thumbnail",
+          "format": "webp",
+          "path": "Belt/Formal/formal 4_thumb.webp",
+          "sizeBytes": 9344
+        },
+        {
+          "size": "thumbnail",
+          "format": "jpg",
+          "path": "Belt/Formal/formal 4_thumb.jpg",
+          "sizeBytes": 15391
+        },
+        {
+          "size": "detail",
+          "format": "webp",
+          "path": "Belt/Formal/formal 4_detail.webp",
+          "sizeBytes": 15696
+        },
+        {
+          "size": "detail",
+          "format": "jpg",
+          "path": "Belt/Formal/formal 4_detail.jpg",
+          "sizeBytes": 32424
+        },
+        {
+          "size": "hero",
+          "format": "webp",
+          "path": "Belt/Formal/formal 4_hero.webp",
+          "sizeBytes": 13802
+        },
+        {
+          "size": "hero",
+          "format": "jpg",
+          "path": "Belt/Formal/formal 4_hero.jpg",
+          "sizeBytes": 27030
+        }
+      ],
+      "errors": []
+    },
+    {
+      "original": "Belt/Formal/formal 5.jpg",
+      "converted": [
+        {
+          "size": "thumbnail",
+          "format": "webp",
+          "path": "Belt/Formal/formal 5_thumb.webp",
+          "sizeBytes": 8286
+        },
+        {
+          "size": "thumbnail",
+          "format": "jpg",
+          "path": "Belt/Formal/formal 5_thumb.jpg",
+          "sizeBytes": 14086
+        },
+        {
+          "size": "detail",
+          "format": "webp",
+          "path": "Belt/Formal/formal 5_detail.webp",
+          "sizeBytes": 13460
+        },
+        {
+          "size": "detail",
+          "format": "jpg",
+          "path": "Belt/Formal/formal 5_detail.jpg",
+          "sizeBytes": 29976
+        },
+        {
+          "size": "hero",
+          "format": "webp",
+          "path": "Belt/Formal/formal 5_hero.webp",
+          "sizeBytes": 11996
+        },
+        {
+          "size": "hero",
+          "format": "jpg",
+          "path": "Belt/Formal/formal 5_hero.jpg",
+          "sizeBytes": 24731
+        }
+      ],
+      "errors": []
+    },
+    {
+      "original": "Wallet/Bifold/bi 1.jpg",
+      "converted": [
+        {
+          "size": "thumbnail",
+          "format": "webp",
+          "path": "Wallet/Bifold/bi 1_thumb.webp",
+          "sizeBytes": 7992
+        },
+        {
+          "size": "thumbnail",
+          "format": "jpg",
+          "path": "Wallet/Bifold/bi 1_thumb.jpg",
+          "sizeBytes": 13578
+        },
+        {
+          "size": "detail",
+          "format": "webp",
+          "path": "Wallet/Bifold/bi 1_detail.webp",
+          "sizeBytes": 13946
+        },
+        {
+          "size": "detail",
+          "format": "jpg",
+          "path": "Wallet/Bifold/bi 1_detail.jpg",
+          "sizeBytes": 30496
+        },
+        {
+          "size": "hero",
+          "format": "webp",
+          "path": "Wallet/Bifold/bi 1_hero.webp",
+          "sizeBytes": 11936
+        },
+        {
+          "size": "hero",
+          "format": "jpg",
+          "path": "Wallet/Bifold/bi 1_hero.jpg",
+          "sizeBytes": 24838
+        }
+      ],
+      "errors": []
+    },
+    {
+      "original": "Wallet/Bifold/bi 2.jpg",
+      "converted": [
+        {
+          "size": "thumbnail",
+          "format": "webp",
+          "path": "Wallet/Bifold/bi 2_thumb.webp",
+          "sizeBytes": 11554
+        },
+        {
+          "size": "thumbnail",
+          "format": "jpg",
+          "path": "Wallet/Bifold/bi 2_thumb.jpg",
+          "sizeBytes": 16387
+        },
+        {
+          "size": "detail",
+          "format": "webp",
+          "path": "Wallet/Bifold/bi 2_detail.webp",
+          "sizeBytes": 20788
+        },
+        {
+          "size": "detail",
+          "format": "jpg",
+          "path": "Wallet/Bifold/bi 2_detail.jpg",
+          "sizeBytes": 40111
+        },
+        {
+          "size": "hero",
+          "format": "webp",
+          "path": "Wallet/Bifold/bi 2_hero.webp",
+          "sizeBytes": 17634
+        },
+        {
+          "size": "hero",
+          "format": "jpg",
+          "path": "Wallet/Bifold/bi 2_hero.jpg",
+          "sizeBytes": 32338
+        }
+      ],
+      "errors": []
+    },
+    {
+      "original": "Wallet/Bifold/bi 3.jpg",
+      "converted": [
+        {
+          "size": "thumbnail",
+          "format": "webp",
+          "path": "Wallet/Bifold/bi 3_thumb.webp",
+          "sizeBytes": 7422
+        },
+        {
+          "size": "thumbnail",
+          "format": "jpg",
+          "path": "Wallet/Bifold/bi 3_thumb.jpg",
+          "sizeBytes": 12239
+        },
+        {
+          "size": "detail",
+          "format": "webp",
+          "path": "Wallet/Bifold/bi 3_detail.webp",
+          "sizeBytes": 12158
+        },
+        {
+          "size": "detail",
+          "format": "jpg",
+          "path": "Wallet/Bifold/bi 3_detail.jpg",
+          "sizeBytes": 26947
+        },
+        {
+          "size": "hero",
+          "format": "webp",
+          "path": "Wallet/Bifold/bi 3_hero.webp",
+          "sizeBytes": 10402
+        },
+        {
+          "size": "hero",
+          "format": "jpg",
+          "path": "Wallet/Bifold/bi 3_hero.jpg",
+          "sizeBytes": 22173
+        }
+      ],
+      "errors": []
+    },
+    {
+      "original": "Wallet/Bifold/bi 4.jpg",
+      "converted": [
+        {
+          "size": "thumbnail",
+          "format": "webp",
+          "path": "Wallet/Bifold/bi 4_thumb.webp",
+          "sizeBytes": 7888
+        },
+        {
+          "size": "thumbnail",
+          "format": "jpg",
+          "path": "Wallet/Bifold/bi 4_thumb.jpg",
+          "sizeBytes": 12914
+        },
+        {
+          "size": "detail",
+          "format": "webp",
+          "path": "Wallet/Bifold/bi 4_detail.webp",
+          "sizeBytes": 13098
+        },
+        {
+          "size": "detail",
+          "format": "jpg",
+          "path": "Wallet/Bifold/bi 4_detail.jpg",
+          "sizeBytes": 28743
+        },
+        {
+          "size": "hero",
+          "format": "webp",
+          "path": "Wallet/Bifold/bi 4_hero.webp",
+          "sizeBytes": 11156
+        },
+        {
+          "size": "hero",
+          "format": "jpg",
+          "path": "Wallet/Bifold/bi 4_hero.jpg",
+          "sizeBytes": 23539
+        }
+      ],
+      "errors": []
+    },
+    {
+      "original": "Wallet/Bifold/bi 5.jpg",
+      "converted": [
+        {
+          "size": "thumbnail",
+          "format": "webp",
+          "path": "Wallet/Bifold/bi 5_thumb.webp",
+          "sizeBytes": 6920
+        },
+        {
+          "size": "thumbnail",
+          "format": "jpg",
+          "path": "Wallet/Bifold/bi 5_thumb.jpg",
+          "sizeBytes": 11740
+        },
+        {
+          "size": "detail",
+          "format": "webp",
+          "path": "Wallet/Bifold/bi 5_detail.webp",
+          "sizeBytes": 10978
+        },
+        {
+          "size": "detail",
+          "format": "jpg",
+          "path": "Wallet/Bifold/bi 5_detail.jpg",
+          "sizeBytes": 25640
+        },
+        {
+          "size": "hero",
+          "format": "webp",
+          "path": "Wallet/Bifold/bi 5_hero.webp",
+          "sizeBytes": 9456
+        },
+        {
+          "size": "hero",
+          "format": "jpg",
+          "path": "Wallet/Bifold/bi 5_hero.jpg",
+          "sizeBytes": 20877
+        }
+      ],
+      "errors": []
+    },
+    {
+      "original": "Wallet/Passport/pass 1.jpg",
+      "converted": [
+        {
+          "size": "thumbnail",
+          "format": "webp",
+          "path": "Wallet/Passport/pass 1_thumb.webp",
+          "sizeBytes": 7944
+        },
+        {
+          "size": "thumbnail",
+          "format": "jpg",
+          "path": "Wallet/Passport/pass 1_thumb.jpg",
+          "sizeBytes": 13398
+        },
+        {
+          "size": "detail",
+          "format": "webp",
+          "path": "Wallet/Passport/pass 1_detail.webp",
+          "sizeBytes": 13684
+        },
+        {
+          "size": "detail",
+          "format": "jpg",
+          "path": "Wallet/Passport/pass 1_detail.jpg",
+          "sizeBytes": 29817
+        },
+        {
+          "size": "hero",
+          "format": "webp",
+          "path": "Wallet/Passport/pass 1_hero.webp",
+          "sizeBytes": 11738
+        },
+        {
+          "size": "hero",
+          "format": "jpg",
+          "path": "Wallet/Passport/pass 1_hero.jpg",
+          "sizeBytes": 24469
+        }
+      ],
+      "errors": []
+    },
+    {
+      "original": "Wallet/Passport/pass 2.jpg",
+      "converted": [
+        {
+          "size": "thumbnail",
+          "format": "webp",
+          "path": "Wallet/Passport/pass 2_thumb.webp",
+          "sizeBytes": 7548
+        },
+        {
+          "size": "thumbnail",
+          "format": "jpg",
+          "path": "Wallet/Passport/pass 2_thumb.jpg",
+          "sizeBytes": 12761
+        },
+        {
+          "size": "detail",
+          "format": "webp",
+          "path": "Wallet/Passport/pass 2_detail.webp",
+          "sizeBytes": 12686
+        },
+        {
+          "size": "detail",
+          "format": "jpg",
+          "path": "Wallet/Passport/pass 2_detail.jpg",
+          "sizeBytes": 28060
+        },
+        {
+          "size": "hero",
+          "format": "webp",
+          "path": "Wallet/Passport/pass 2_hero.webp",
+          "sizeBytes": 10880
+        },
+        {
+          "size": "hero",
+          "format": "jpg",
+          "path": "Wallet/Passport/pass 2_hero.jpg",
+          "sizeBytes": 23049
+        }
+      ],
+      "errors": []
+    },
+    {
+      "original": "Wallet/Passport/pass 3.jpg",
+      "converted": [
+        {
+          "size": "thumbnail",
+          "format": "webp",
+          "path": "Wallet/Passport/pass 3_thumb.webp",
+          "sizeBytes": 8232
+        },
+        {
+          "size": "thumbnail",
+          "format": "jpg",
+          "path": "Wallet/Passport/pass 3_thumb.jpg",
+          "sizeBytes": 13716
+        },
+        {
+          "size": "detail",
+          "format": "webp",
+          "path": "Wallet/Passport/pass 3_detail.webp",
+          "sizeBytes": 14012
+        },
+        {
+          "size": "detail",
+          "format": "jpg",
+          "path": "Wallet/Passport/pass 3_detail.jpg",
+          "sizeBytes": 30852
+        },
+        {
+          "size": "hero",
+          "format": "webp",
+          "path": "Wallet/Passport/pass 3_hero.webp",
+          "sizeBytes": 12040
+        },
+        {
+          "size": "hero",
+          "format": "jpg",
+          "path": "Wallet/Passport/pass 3_hero.jpg",
+          "sizeBytes": 25020
+        }
+      ],
+      "errors": []
+    },
+    {
+      "original": "Wallet/Passport/pass 4.jpg",
+      "converted": [
+        {
+          "size": "thumbnail",
+          "format": "webp",
+          "path": "Wallet/Passport/pass 4_thumb.webp",
+          "sizeBytes": 8476
+        },
+        {
+          "size": "thumbnail",
+          "format": "jpg",
+          "path": "Wallet/Passport/pass 4_thumb.jpg",
+          "sizeBytes": 14107
+        },
+        {
+          "size": "detail",
+          "format": "webp",
+          "path": "Wallet/Passport/pass 4_detail.webp",
+          "sizeBytes": 14840
+        },
+        {
+          "size": "detail",
+          "format": "jpg",
+          "path": "Wallet/Passport/pass 4_detail.jpg",
+          "sizeBytes": 31608
+        },
+        {
+          "size": "hero",
+          "format": "webp",
+          "path": "Wallet/Passport/pass 4_hero.webp",
+          "sizeBytes": 12842
+        },
+        {
+          "size": "hero",
+          "format": "jpg",
+          "path": "Wallet/Passport/pass 4_hero.jpg",
+          "sizeBytes": 25876
+        }
+      ],
+      "errors": []
+    },
+    {
+      "original": "Wallet/Passport/pass 5.jpg",
+      "converted": [
+        {
+          "size": "thumbnail",
+          "format": "webp",
+          "path": "Wallet/Passport/pass 5_thumb.webp",
+          "sizeBytes": 7622
+        },
+        {
+          "size": "thumbnail",
+          "format": "jpg",
+          "path": "Wallet/Passport/pass 5_thumb.jpg",
+          "sizeBytes": 13056
+        },
+        {
+          "size": "detail",
+          "format": "webp",
+          "path": "Wallet/Passport/pass 5_detail.webp",
+          "sizeBytes": 12848
+        },
+        {
+          "size": "detail",
+          "format": "jpg",
+          "path": "Wallet/Passport/pass 5_detail.jpg",
+          "sizeBytes": 28975
+        },
+        {
+          "size": "hero",
+          "format": "webp",
+          "path": "Wallet/Passport/pass 5_hero.webp",
+          "sizeBytes": 11114
+        },
+        {
+          "size": "hero",
+          "format": "jpg",
+          "path": "Wallet/Passport/pass 5_hero.jpg",
+          "sizeBytes": 23638
+        }
+      ],
+      "errors": []
+    },
+    {
+      "original": "Wallet/Trifold/tri 1.jpg",
+      "converted": [
+        {
+          "size": "thumbnail",
+          "format": "webp",
+          "path": "Wallet/Trifold/tri 1_thumb.webp",
+          "sizeBytes": 7320
+        },
+        {
+          "size": "thumbnail",
+          "format": "jpg",
+          "path": "Wallet/Trifold/tri 1_thumb.jpg",
+          "sizeBytes": 13087
+        },
+        {
+          "size": "detail",
+          "format": "webp",
+          "path": "Wallet/Trifold/tri 1_detail.webp",
+          "sizeBytes": 12784
+        },
+        {
+          "size": "detail",
+          "format": "jpg",
+          "path": "Wallet/Trifold/tri 1_detail.jpg",
+          "sizeBytes": 29303
+        },
+        {
+          "size": "hero",
+          "format": "webp",
+          "path": "Wallet/Trifold/tri 1_hero.webp",
+          "sizeBytes": 10924
+        },
+        {
+          "size": "hero",
+          "format": "jpg",
+          "path": "Wallet/Trifold/tri 1_hero.jpg",
+          "sizeBytes": 23937
+        }
+      ],
+      "errors": []
+    },
+    {
+      "original": "Wallet/Trifold/tri 2.jpg",
+      "converted": [
+        {
+          "size": "thumbnail",
+          "format": "webp",
+          "path": "Wallet/Trifold/tri 2_thumb.webp",
+          "sizeBytes": 7906
+        },
+        {
+          "size": "thumbnail",
+          "format": "jpg",
+          "path": "Wallet/Trifold/tri 2_thumb.jpg",
+          "sizeBytes": 13764
+        },
+        {
+          "size": "detail",
+          "format": "webp",
+          "path": "Wallet/Trifold/tri 2_detail.webp",
+          "sizeBytes": 13588
+        },
+        {
+          "size": "detail",
+          "format": "jpg",
+          "path": "Wallet/Trifold/tri 2_detail.jpg",
+          "sizeBytes": 31406
+        },
+        {
+          "size": "hero",
+          "format": "webp",
+          "path": "Wallet/Trifold/tri 2_hero.webp",
+          "sizeBytes": 11624
+        },
+        {
+          "size": "hero",
+          "format": "jpg",
+          "path": "Wallet/Trifold/tri 2_hero.jpg",
+          "sizeBytes": 25589
+        }
+      ],
+      "errors": []
+    },
+    {
+      "original": "Wallet/Trifold/tri 3.jpg",
+      "converted": [
+        {
+          "size": "thumbnail",
+          "format": "webp",
+          "path": "Wallet/Trifold/tri 3_thumb.webp",
+          "sizeBytes": 8138
+        },
+        {
+          "size": "thumbnail",
+          "format": "jpg",
+          "path": "Wallet/Trifold/tri 3_thumb.jpg",
+          "sizeBytes": 13824
+        },
+        {
+          "size": "detail",
+          "format": "webp",
+          "path": "Wallet/Trifold/tri 3_detail.webp",
+          "sizeBytes": 14786
+        },
+        {
+          "size": "detail",
+          "format": "jpg",
+          "path": "Wallet/Trifold/tri 3_detail.jpg",
+          "sizeBytes": 32191
+        },
+        {
+          "size": "hero",
+          "format": "webp",
+          "path": "Wallet/Trifold/tri 3_hero.webp",
+          "sizeBytes": 12486
+        },
+        {
+          "size": "hero",
+          "format": "jpg",
+          "path": "Wallet/Trifold/tri 3_hero.jpg",
+          "sizeBytes": 26305
+        }
+      ],
+      "errors": []
+    },
+    {
+      "original": "Wallet/Trifold/tri 4.jpg",
+      "converted": [
+        {
+          "size": "thumbnail",
+          "format": "webp",
+          "path": "Wallet/Trifold/tri 4_thumb.webp",
+          "sizeBytes": 7210
+        },
+        {
+          "size": "thumbnail",
+          "format": "jpg",
+          "path": "Wallet/Trifold/tri 4_thumb.jpg",
+          "sizeBytes": 12304
+        },
+        {
+          "size": "detail",
+          "format": "webp",
+          "path": "Wallet/Trifold/tri 4_detail.webp",
+          "sizeBytes": 11582
+        },
+        {
+          "size": "detail",
+          "format": "jpg",
+          "path": "Wallet/Trifold/tri 4_detail.jpg",
+          "sizeBytes": 27178
+        },
+        {
+          "size": "hero",
+          "format": "webp",
+          "path": "Wallet/Trifold/tri 4_hero.webp",
+          "sizeBytes": 9996
+        },
+        {
+          "size": "hero",
+          "format": "jpg",
+          "path": "Wallet/Trifold/tri 4_hero.jpg",
+          "sizeBytes": 21992
+        }
+      ],
+      "errors": []
+    },
+    {
+      "original": "Wallet/Trifold/tri 5.jpg",
+      "converted": [
+        {
+          "size": "thumbnail",
+          "format": "webp",
+          "path": "Wallet/Trifold/tri 5_thumb.webp",
+          "sizeBytes": 6886
+        },
+        {
+          "size": "thumbnail",
+          "format": "jpg",
+          "path": "Wallet/Trifold/tri 5_thumb.jpg",
+          "sizeBytes": 11981
+        },
+        {
+          "size": "detail",
+          "format": "webp",
+          "path": "Wallet/Trifold/tri 5_detail.webp",
+          "sizeBytes": 10936
+        },
+        {
+          "size": "detail",
+          "format": "jpg",
+          "path": "Wallet/Trifold/tri 5_detail.jpg",
+          "sizeBytes": 25905
+        },
+        {
+          "size": "hero",
+          "format": "webp",
+          "path": "Wallet/Trifold/tri 5_hero.webp",
+          "sizeBytes": 9410
+        },
+        {
+          "size": "hero",
+          "format": "jpg",
+          "path": "Wallet/Trifold/tri 5_hero.jpg",
+          "sizeBytes": 21081
+        }
+      ],
+      "errors": []
+    },
+    {
+      "original": "Wallet/Trifold/tri 6.jpg",
+      "converted": [
+        {
+          "size": "thumbnail",
+          "format": "webp",
+          "path": "Wallet/Trifold/tri 6_thumb.webp",
+          "sizeBytes": 6838
+        },
+        {
+          "size": "thumbnail",
+          "format": "jpg",
+          "path": "Wallet/Trifold/tri 6_thumb.jpg",
+          "sizeBytes": 11721
+        },
+        {
+          "size": "detail",
+          "format": "webp",
+          "path": "Wallet/Trifold/tri 6_detail.webp",
+          "sizeBytes": 10858
+        },
+        {
+          "size": "detail",
+          "format": "jpg",
+          "path": "Wallet/Trifold/tri 6_detail.jpg",
+          "sizeBytes": 26100
+        },
+        {
+          "size": "hero",
+          "format": "webp",
+          "path": "Wallet/Trifold/tri 6_hero.webp",
+          "sizeBytes": 9368
+        },
+        {
+          "size": "hero",
+          "format": "jpg",
+          "path": "Wallet/Trifold/tri 6_hero.jpg",
+          "sizeBytes": 21121
+        }
+      ],
+      "errors": []
+    }
+  ]
+}
