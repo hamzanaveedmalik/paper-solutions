@@ -1,90 +1,75 @@
 import { useEffect } from 'react';
+import type { PriceInfo } from '@/data/types';
+import { SITE_URL, siteConfig } from '@/config/site';
 
-interface ProductStructuredDataProps {
+type ProductStructuredDataProps = {
   name: string;
   description: string;
   image?: string;
   sku?: string;
-  priceCurrency?: string;
-  availability?: 'InStock' | 'OutOfStock' | 'PreOrder';
   category?: string;
-  brand?: string;
-  manufacturer?: string;
   material?: string;
-}
+  price?: PriceInfo;
+  url: string;
+};
 
-export const ProductStructuredData = ({
+/**
+ * Emits Product + Breadcrumb-safe JSON-LD using verified fields only.
+ * Offer markup is omitted when price is unknown / request / range.
+ */
+export default function ProductStructuredData({
   name,
   description,
   image,
   sku,
-  priceCurrency = 'USD',
-  availability = 'InStock',
   category,
-  brand = 'Forth & Vale',
-  manufacturer = 'Forth & Vale',
-  material = 'Premium Leather',
-}: ProductStructuredDataProps) => {
+  material,
+  price,
+  url,
+}: ProductStructuredDataProps) {
   useEffect(() => {
-    const structuredData = {
+    const data: Record<string, unknown> = {
       '@context': 'https://schema.org',
       '@type': 'Product',
       name,
       description,
-      ...(image && {
-        image: image.startsWith('/')
-          ? `https://www.forthandvale.com${image}`
-          : image,
-      }),
-      ...(sku && { sku }),
-      ...(category && { category }),
+      url,
       brand: {
         '@type': 'Brand',
-        name: brand,
+        name: siteConfig.legalName,
       },
-      manufacturer: {
-        '@type': 'Organization',
-        name: manufacturer,
-      },
-      offers: {
-        '@type': 'Offer',
-        priceCurrency,
-        availability: `https://schema.org/${availability}`,
-        itemCondition: 'https://schema.org/NewCondition',
-      },
-      ...(material && {
-        material: material,
-      }),
     };
 
-    let script = document.getElementById('product-structured-data');
-    if (script) {
-      script.innerHTML = JSON.stringify(structuredData);
-    } else {
-      script = document.createElement('script');
-      script.id = 'product-structured-data';
-      script.type = 'application/ld+json';
-      script.innerHTML = JSON.stringify(structuredData);
-      document.head.appendChild(script);
+    if (image) {
+      data.image = image.startsWith('http') ? image : `${SITE_URL}${image}`;
+    }
+    if (sku) data.sku = sku;
+    if (category) data.category = category;
+    if (material) {
+      data.material = material;
     }
 
+    if (price?.kind === 'exact') {
+      data.offers = {
+        '@type': 'Offer',
+        priceCurrency: price.money.currency,
+        price: (price.money.amountMinor / 100).toFixed(2),
+        url,
+        availability: 'https://schema.org/InStock',
+      };
+    }
+
+    const script = document.createElement('script');
+    script.type = 'application/ld+json';
+    script.id = 'pcsuk-product-jsonld';
+    script.text = JSON.stringify(data);
+    document.getElementById('pcsuk-product-jsonld')?.remove();
+    document.head.appendChild(script);
+
     return () => {
-      script?.remove();
+      document.getElementById('pcsuk-product-jsonld')?.remove();
     };
-  }, [
-    name,
-    description,
-    image,
-    sku,
-    category,
-    brand,
-    manufacturer,
-    material,
-    priceCurrency,
-    availability,
-  ]);
+  }, [name, description, image, sku, category, material, price, url]);
 
   return null;
-};
-
-export default ProductStructuredData;
+}

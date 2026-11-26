@@ -1,124 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,500;9..144,650;9..144,700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
-
 @layer base {
   :root {
-    /* Forth & Vale Brand Colors - Premium Dark Palette */
-    --background: 0 0% 100%;
-    --foreground: 240 15% 9%;
+    /* PCS UK — gold / charcoal wholesale catalogue palette from brand mark */
+    --background: 40 10% 98%;
+    --foreground: 0 0% 12%;
 
     --card: 0 0% 100%;
-    --card-foreground: 240 15% 9%;
+    --card-foreground: 0 0% 12%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 240 15% 9%;
+    --popover-foreground: 0 0% 12%;
 
-    /* Primary: Deep Purple Brand Color (#24104C) */
-    --primary: 267 65% 18%;
-    --primary-foreground: 42 78% 85%;
+    /* Primary: near-black from logo ground */
+    --primary: 0 0% 8%;
+    --primary-foreground: 40 33% 96%;
 
-    /* Secondary: Rich Brown Leather tones */
-    --secondary: 25 30% 25%;
-    --secondary-foreground: 42 78% 85%;
+    /* Secondary: warm stone */
+    --secondary: 40 10% 93%;
+    --secondary-foreground: 0 0% 14%;
 
-    /* Muted: Warm neutrals */
-    --muted: 20 14% 94%;
-    --muted-foreground: 240 8% 46%;
+    --muted: 40 8% 94%;
+    --muted-foreground: 0 0% 38%;
 
-    /* Accent: Warm gold/cream from brand */
-    --accent: 42 78% 85%;
-    --accent-foreground: 240 15% 9%;
+    /* Accent: soft gold wash */
+    --accent: 45 55% 92%;
+    --accent-foreground: 0 0% 12%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 72% 48%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 20 14% 90%;
-    --input: 20 14% 90%;
-    --ring: 267 65% 18%;
+    --border: 40 8% 86%;
+    --input: 40 8% 86%;
+    --ring: 43 65% 42%;
 
-    /* Premium Design Tokens */
-    --radius: 0.75rem;
-    
-    /* Brand-specific tokens */
-    --luxury-dark: 267 65% 10%;
-    --luxury-navy: 267 65% 18%;
-    --luxury-purple: 267 65% 22%;
-    --leather-brown: 25 30% 25%;
-    --leather-tan: 30 40% 65%;
-    --cream-gold: 42 78% 85%;
-    --warm-white: 42 15% 98%;
-    
-    /* Gradients */
-    --gradient-luxury: linear-gradient(135deg, hsl(var(--luxury-dark)), hsl(var(--luxury-navy)));
-    --gradient-leather: linear-gradient(135deg, hsl(var(--leather-brown)), hsl(var(--leather-tan)));
-    --gradient-accent: linear-gradient(135deg, hsl(var(--cream-gold)), hsl(var(--accent)));
-    
-    /* Shadows */
-    --shadow-luxury: 0 20px 40px -10px hsl(var(--luxury-dark) / 0.3);
-    --shadow-soft: 0 10px 30px -5px hsl(var(--luxury-navy) / 0.1);
-    --shadow-card: 0 4px 20px -2px hsl(var(--luxury-navy) / 0.08);
-    
-    /* Typography */
-    --font-display: 'Playfair Display', serif;
-    --font-body: 'Inter', sans-serif;
+    --radius: 0.5rem;
+
+    --pcs-gold: 43 74% 49%;
+    --pcs-forest: 0 0% 8%;
+    --pcs-forest-deep: 0 0% 0%;
+    --pcs-kraft: 43 45% 55%;
+    --pcs-paper: 40 10% 98%;
+    --pcs-ink: 0 0% 12%;
+
+    --font-display: 'Fraunces', Georgia, serif;
+    --font-body: 'Figtree', 'Segoe UI', sans-serif;
 
     --sidebar-background: 0 0% 98%;
-
     --sidebar-foreground: 240 5.3% 26.1%;
-
     --sidebar-primary: 240 5.9% 10%;
-
     --sidebar-primary-foreground: 0 0% 98%;
-
     --sidebar-accent: 240 4.8% 95.9%;
-
     --sidebar-accent-foreground: 240 5.9% 10%;
-
     --sidebar-border: 220 13% 91%;
-
-    --sidebar-ring: 217.2 91.2% 59.8%;
-  }
-
-  .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
-
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
-
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
-
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
-
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
-
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
-
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
-
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
     --sidebar-ring: 217.2 91.2% 59.8%;
   }
 }
@@ -128,7 +66,27 @@ All colors MUST be HSL.
     @apply border-border;
   }
 
+  html {
+    scroll-behavior: smooth;
+  }
+
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-body antialiased;
+  }
+
+  h1,
+  h2,
+  h3 {
+    @apply font-display tracking-tight;
+  }
+
+  :focus-visible {
+    @apply outline-none ring-2 ring-ring ring-offset-2 ring-offset-background;
+  }
+}
+
+@layer utilities {
+  .product-photo-frame {
+    @apply bg-[#f3f1ec] border border-border/70;
   }
 }

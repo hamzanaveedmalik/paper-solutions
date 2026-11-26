@@ -1,7 +1,8 @@
 import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
+import { SITE_URL, siteConfig } from '@/config/site';
 
-interface SEOProps {
+type SEOProps = {
   title?: string;
   description?: string;
   keywords?: string;
@@ -11,59 +12,54 @@ interface SEOProps {
   canonical?: string;
   noindex?: boolean;
   type?: string;
-}
+};
 
 export const useSEO = ({
-  title = 'Forth & Vale — Premium Leather Goods Manufacturing',
-  description = 'Forth & Vale designs and manufactures premium leather wallets, card holders, belts, bags and accessories. OEM/Private Label for brands in the UK, EU & USA.',
-  keywords = 'leather goods, premium leather, wallets, bags, OEM manufacturing, private label, leather accessories, custom leather products, UK leather manufacturer',
+  title = `${siteConfig.brandName} — ${siteConfig.legalName}`,
+  description = siteConfig.description,
+  keywords = 'catering packaging, food containers, paper bags, cups, takeaway supplies, wholesale catering supplies UK',
   ogTitle,
   ogDescription,
-  ogImage = '/forth-vale-logo.png',
+  ogImage = siteConfig.logoPath,
   canonical,
   noindex = false,
   type = 'website',
 }: SEOProps = {}) => {
   const location = useLocation();
-  const fullTitle = title.includes('Forth') ? title : `${title} | Forth & Vale`;
-  const currentUrl = `https://www.forthandvale.com${location.pathname}`;
-  const canonicalUrl = canonical || currentUrl;
+  const fullTitle = title.includes(siteConfig.brandName)
+    ? title
+    : `${title} | ${siteConfig.brandName}`;
+  const currentUrl = `${SITE_URL}${location.pathname}${location.search}`;
+  const canonicalUrl = canonical || `${SITE_URL}${location.pathname}`;
+  const absoluteImage = ogImage.startsWith('http') ? ogImage : `${SITE_URL}${ogImage}`;
 
   useEffect(() => {
-    // Update title
     document.title = fullTitle;
 
-    // Update or create meta description
-    let metaDescription = document.querySelector('meta[name="description"]');
-    if (!metaDescription) {
-      metaDescription = document.createElement('meta');
-      metaDescription.setAttribute('name', 'description');
-      document.head.appendChild(metaDescription);
-    }
-    metaDescription.setAttribute('content', description);
+    const setMeta = (attr: 'name' | 'property', key: string, content: string) => {
+      let el = document.querySelector(`meta[${attr}="${key}"]`);
+      if (!el) {
+        el = document.createElement('meta');
+        el.setAttribute(attr, key);
+        document.head.appendChild(el);
+      }
+      el.setAttribute('content', content);
+    };
 
-    // Update or create meta keywords
-    let metaKeywords = document.querySelector('meta[name="keywords"]');
-    if (!metaKeywords) {
-      metaKeywords = document.createElement('meta');
-      metaKeywords.setAttribute('name', 'keywords');
-      document.head.appendChild(metaKeywords);
-    }
-    metaKeywords.setAttribute('content', keywords);
+    setMeta('name', 'description', description);
+    setMeta('name', 'keywords', keywords);
+    setMeta('name', 'robots', noindex ? 'noindex, nofollow' : 'index, follow');
+    setMeta('property', 'og:title', ogTitle || fullTitle);
+    setMeta('property', 'og:description', ogDescription || description);
+    setMeta('property', 'og:url', currentUrl);
+    setMeta('property', 'og:type', type);
+    setMeta('property', 'og:image', absoluteImage);
+    setMeta('property', 'og:site_name', siteConfig.legalName);
+    setMeta('name', 'twitter:card', 'summary_large_image');
+    setMeta('name', 'twitter:title', ogTitle || fullTitle);
+    setMeta('name', 'twitter:description', ogDescription || description);
+    setMeta('name', 'twitter:image', absoluteImage);
 
-    // Update or create robots meta
-    let metaRobots = document.querySelector('meta[name="robots"]');
-    if (!metaRobots) {
-      metaRobots = document.createElement('meta');
-      metaRobots.setAttribute('name', 'robots');
-      document.head.appendChild(metaRobots);
-    }
-    metaRobots.setAttribute(
-      'content',
-      noindex ? 'noindex, nofollow' : 'index, follow'
-    );
-
-    // Update canonical link
     let canonicalLink = document.querySelector('link[rel="canonical"]');
     if (!canonicalLink) {
       canonicalLink = document.createElement('link');
@@ -71,42 +67,6 @@ export const useSEO = ({
       document.head.appendChild(canonicalLink);
     }
     canonicalLink.setAttribute('href', canonicalUrl);
-
-    // Update Open Graph tags
-    const ogTags = {
-      'og:title': ogTitle || fullTitle,
-      'og:description': ogDescription || description,
-      'og:url': currentUrl,
-      'og:type': type,
-      'og:image': `https://www.forthandvale.com${ogImage}`,
-    };
-
-    Object.entries(ogTags).forEach(([property, content]) => {
-      let metaOg = document.querySelector(`meta[property="${property}"]`);
-      if (!metaOg) {
-        metaOg = document.createElement('meta');
-        metaOg.setAttribute('property', property);
-        document.head.appendChild(metaOg);
-      }
-      metaOg.setAttribute('content', content);
-    });
-
-    // Update Twitter Card tags
-    const twitterTags = {
-      'twitter:title': ogTitle || fullTitle,
-      'twitter:description': ogDescription || description,
-      'twitter:image': `https://www.forthandvale.com${ogImage}`,
-    };
-
-    Object.entries(twitterTags).forEach(([name, content]) => {
-      let metaTwitter = document.querySelector(`meta[name="${name}"]`);
-      if (!metaTwitter) {
-        metaTwitter = document.createElement('meta');
-        metaTwitter.setAttribute('name', name);
-        document.head.appendChild(metaTwitter);
-      }
-      metaTwitter.setAttribute('content', content);
-    });
   }, [
     title,
     description,
@@ -118,9 +78,11 @@ export const useSEO = ({
     noindex,
     type,
     location.pathname,
+    location.search,
     fullTitle,
     currentUrl,
     canonicalUrl,
+    absoluteImage,
   ]);
 };
 

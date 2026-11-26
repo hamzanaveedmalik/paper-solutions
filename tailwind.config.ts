@@ -13,14 +13,14 @@ export default {
 	theme: {
 		container: {
 			center: true,
-			padding: '2rem',
+			padding: '1.25rem',
 			screens: {
-				'2xl': '1400px'
+				'2xl': '1200px'
 			}
 		},
 		extend: {
 			fontFamily: {
-				display: ['var(--font-display)', 'serif'],
+				display: ['var(--font-display)', 'Georgia', 'serif'],
 				body: ['var(--font-body)', 'sans-serif'],
 			},
 			colors: {
@@ -57,21 +57,13 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
-				// Forth & Vale luxury brand colors
-				luxury: {
-					dark: 'hsl(var(--luxury-dark))',
-					navy: 'hsl(var(--luxury-navy))',
-					purple: 'hsl(var(--luxury-purple))',
-				},
-				leather: {
-					brown: 'hsl(var(--leather-brown))',
-					tan: 'hsl(var(--leather-tan))',
-				},
-				cream: {
-					gold: 'hsl(var(--cream-gold))',
-				},
-				warm: {
-					white: 'hsl(var(--warm-white))',
+				pcs: {
+					forest: 'hsl(var(--pcs-forest))',
+					deep: 'hsl(var(--pcs-forest-deep))',
+					kraft: 'hsl(var(--pcs-kraft))',
+					gold: 'hsl(var(--pcs-gold))',
+					paper: 'hsl(var(--pcs-paper))',
+					ink: 'hsl(var(--pcs-ink))',
 				},
 				sidebar: {
 					DEFAULT: 'hsl(var(--sidebar-background))',
@@ -91,20 +83,12 @@ export default {
 			},
 			keyframes: {
 				'accordion-down': {
-					from: {
-						height: '0'
-					},
-					to: {
-						height: 'var(--radix-accordion-content-height)'
-					}
+					from: { height: '0' },
+					to: { height: 'var(--radix-accordion-content-height)' }
 				},
 				'accordion-up': {
-					from: {
-						height: 'var(--radix-accordion-content-height)'
-					},
-					to: {
-						height: '0'
-					}
+					from: { height: 'var(--radix-accordion-content-height)' },
+					to: { height: '0' }
 				}
 			},
 			animation: {
@@ -113,5 +97,5 @@ export default {
 			}
 		}
 	},
-        plugins: [animate],
+	plugins: [animate],
 } satisfies Config;

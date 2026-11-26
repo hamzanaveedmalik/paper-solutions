@@ -1,48 +1,31 @@
 import { useEffect } from 'react';
 
-interface BreadcrumbItem {
-  name: string;
-  url: string;
-}
+type Crumb = { name: string; url: string };
 
-interface BreadcrumbStructuredDataProps {
-  items: BreadcrumbItem[];
-}
-
-export const BreadcrumbStructuredData = ({
-  items,
-}: BreadcrumbStructuredDataProps) => {
+export default function BreadcrumbStructuredData({ items }: { items: Crumb[] }) {
   useEffect(() => {
-    const structuredData = {
+    const data = {
       '@context': 'https://schema.org',
       '@type': 'BreadcrumbList',
       itemListElement: items.map((item, index) => ({
         '@type': 'ListItem',
         position: index + 1,
         name: item.name,
-        item: item.url.startsWith('/')
-          ? `https://www.forthandvale.com${item.url}`
-          : item.url,
+        item: item.url,
       })),
     };
 
-    let script = document.getElementById('breadcrumb-structured-data');
-    if (script) {
-      script.innerHTML = JSON.stringify(structuredData);
-    } else {
-      script = document.createElement('script');
-      script.id = 'breadcrumb-structured-data';
-      script.type = 'application/ld+json';
-      script.innerHTML = JSON.stringify(structuredData);
-      document.head.appendChild(script);
-    }
+    const script = document.createElement('script');
+    script.type = 'application/ld+json';
+    script.id = 'pcsuk-breadcrumb-jsonld';
+    script.text = JSON.stringify(data);
+    document.getElementById('pcsuk-breadcrumb-jsonld')?.remove();
+    document.head.appendChild(script);
 
     return () => {
-      script?.remove();
+      document.getElementById('pcsuk-breadcrumb-jsonld')?.remove();
     };
   }, [items]);
 
   return null;
-};
-
-export default BreadcrumbStructuredData;
+}

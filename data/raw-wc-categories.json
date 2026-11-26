@@ -1,0 +1,116 @@
+[
+  {
+    "id": 92,
+    "name": "Bagasse Packaging",
+    "slug": "bagasse-packaging",
+    "description": "",
+    "parent": 0,
+    "count": 5,
+    "image": null,
+    "permalink": "https://pcsuk.co.uk/product-category/bagasse-packaging/"
+  },
+  {
+    "id": 85,
+    "name": "Cups & Accessories",
+    "slug": "cups-accessories",
+    "description": "",
+    "parent": 0,
+    "count": 12,
+    "image": null,
+    "permalink": "https://pcsuk.co.uk/product-category/cups-accessories/"
+  },
+  {
+    "id": 95,
+    "name": "Cutlery & Napkins",
+    "slug": "cutlery-napkins",
+    "description": "",
+    "parent": 0,
+    "count": 6,
+    "image": null,
+    "permalink": "https://pcsuk.co.uk/product-category/cutlery-napkins/"
+  },
+  {
+    "id": 100,
+    "name": "Extras",
+    "slug": "extras",
+    "description": "",
+    "parent": 0,
+    "count": 4,
+    "image": null,
+    "permalink": "https://pcsuk.co.uk/product-category/extras/"
+  },
+  {
+    "id": 97,
+    "name": "Fish & Chips",
+    "slug": "fish-chips",
+    "description": "",
+    "parent": 0,
+    "count": 11,
+    "image": null,
+    "permalink": "https://pcsuk.co.uk/product-category/fish-chips/"
+  },
+  {
+    "id": 94,
+    "name": "Food Containers and Sauce Pots",
+    "slug": "food-containers-and-sauce-pots",
+    "description": "",
+    "parent": 0,
+    "count": 9,
+    "image": null,
+    "permalink": "https://pcsuk.co.uk/product-category/food-containers-and-sauce-pots/"
+  },
+  {
+    "id": 84,
+    "name": "Paper bags",
+    "slug": "paper-bags",
+    "description": "",
+    "parent": 0,
+    "count": 22,
+    "image": {
+      "id": 5499,
+      "src": "https://pcsuk.co.uk/wp-content/uploads/2025/10/202509111757596525486DSC09092.jpg",
+      "alt": ""
+    },
+    "permalink": "https://pcsuk.co.uk/product-category/paper-bags/"
+  },
+  {
+    "id": 96,
+    "name": "Paper Boxes",
+    "slug": "paper-boxes",
+    "description": "",
+    "parent": 0,
+    "count": 6,
+    "image": null,
+    "permalink": "https://pcsuk.co.uk/product-category/paper-boxes/"
+  },
+  {
+    "id": 93,
+    "name": "Paper Straws",
+    "slug": "paper-straws",
+    "description": "",
+    "parent": 0,
+    "count": 5,
+    "image": null,
+    "permalink": "https://pcsuk.co.uk/product-category/paper-straws/"
+  },
+  {
+    "id": 91,
+    "name": "Pizza Boxes",
+    "slug": "pizza-boxes",
+    "description": "",
+    "parent": 0,
+    "count": 3,
+    "image": null,
+    "permalink": "https://pcsuk.co.uk/product-category/pizza-boxes/"
+  },
+  {
+    "id": 98,
+    "name": "Wrapping Paper",
+    "slug": "wrapping-paper",
+    "description": "",
+    "parent": 0,
+    "count": 4,
+    "image": null,
+    "permalink": "https://pcsuk.co.uk/product-category/wrapping-paper/"
+  }
+]

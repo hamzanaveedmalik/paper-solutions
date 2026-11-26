@@ -5,10 +5,16 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "vite build && npm run generate:sitemap",
     "build:dev": "vite build --mode development",
     "lint": "eslint .",
     "preview": "vite preview",
+    "test": "vitest run && node scripts/import-dedupe.test.mjs",
+    "test:watch": "vitest",
+    "typecheck": "tsc -p tsconfig.app.json --noEmit",
+    "import:pcsuk": "node scripts/import-pcsuk.mjs",
+    "import:pcsuk:fetch": "node scripts/import-pcsuk.mjs --fetch",
+    "import:pcsuk:dry-run": "node scripts/import-pcsuk.mjs --dry-run",
     "generate:sitemap": "node scripts/generate-sitemap.js"
   },
   "dependencies": {
@@ -83,6 +89,7 @@
     "tailwindcss": "^3.4.17",
     "typescript": "^5.8.3",
     "typescript-eslint": "^8.38.0",
-    "vite": "^5.4.19"
+    "vite": "^5.4.19",
+    "vitest": "^3.2.4"
   }
 }

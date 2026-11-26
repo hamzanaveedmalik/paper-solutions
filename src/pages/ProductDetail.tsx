@@ -1,432 +1,271 @@
-import Navigation from '@/components/Navigation';
-import Footer from '@/components/Footer';
-import PriceCalculator from '@/components/PriceCalculator';
-import { Card, CardContent } from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
-import { useParams, Navigate, Link } from 'react-router-dom';
-import { getProductDetail } from '@/data/productDetails';
-import { useState } from 'react';
-import useSEO from '@/hooks/useSEO';
+import { useMemo, useState } from 'react';
+import { Link, Navigate, useParams } from 'react-router-dom';
+import Layout from '@/components/Layout';
+import ProductCard from '@/components/catalogue/ProductCard';
+import ProductImage from '@/components/catalogue/ProductImage';
+import BreadcrumbStructuredData from '@/components/BreadcrumbStructuredData';
 import ProductStructuredData from '@/components/ProductStructuredData';
+import { Button } from '@/components/ui/button';
+import { Input } from '@/components/ui/input';
+import { Label } from '@/components/ui/label';
+import {
+  getCategoryBySlug,
+  getProductBySlug,
+  getRelatedProducts,
+} from '@/data/catalogue';
+import { formatPriceInfo } from '@/lib/pricing';
+import { useQuote } from '@/contexts/QuoteContext';
+import useSEO from '@/hooks/useSEO';
+import { toast } from 'sonner';
+import { SITE_URL } from '@/config/site';
 
-const ProductDetail = () => {
+export default function ProductDetail() {
   const { slug } = useParams();
-  const product = slug ? getProductDetail(slug) : undefined;
-  const [selectedVariant, setSelectedVariant] = useState(0);
+  const product = slug ? getProductBySlug(slug) : undefined;
+  const { addItem } = useQuote();
 
-  if (!product) {
-    return <Navigate to="/" replace />;
-  }
+  const [variantId, setVariantId] = useState(product?.variants[0]?.id || '');
+  const [quantity, setQuantity] = useState(1);
+  const [imageIndex, setImageIndex] = useState(0);
 
-  // Get current variant for SEO and product
-  const currentVariant =
-    product.variants && product.variants.length > 0
-      ? product.variants[selectedVariant]
-      : product;
+  const selectedVariant = useMemo(() => {
+    if (!product) return null;
+    return product.variants.find((v) => v.id === variantId) || null;
+  }, [product, variantId]);
 
-  // SEO metadata
+  const category = product?.primaryCategorySlug
+    ? getCategoryBySlug(product.primaryCategorySlug)
+    : undefined;
+  const related = product ? getRelatedProducts(product, 4) : [];
+  const gallery = product
+    ? selectedVariant?.images?.length
+      ? selectedVariant.images
+      : product.images
+    : [];
+  const activeImage = gallery[imageIndex] || gallery[0];
+  const price = selectedVariant ? selectedVariant.price : product?.price;
+  const packQty = selectedVariant?.packQuantity ?? product?.packQuantity;
+  const packUnit = selectedVariant?.packUnit ?? product?.packUnit ?? 'pack';
+
   useSEO({
-    title: `${product.name} - Premium Leather Goods | Forth & Vale`,
-    description: product.description,
-    keywords: `leather ${product.name.toLowerCase()}, premium ${product.name.toLowerCase()}, custom ${product.name.toLowerCase()}, OEM ${product.name.toLowerCase()}, wholesale ${product.name.toLowerCase()}`,
-    ogTitle: `${product.name} - Premium Leather Goods`,
-    ogDescription: product.description,
-    ogImage: currentVariant.image,
+    title: product?.name || 'Product',
+    description:
+      product?.shortDescriptionText ||
+      product?.descriptionText?.slice(0, 160) ||
+      'PCS UK catering packaging product.',
+    ogImage: activeImage?.src || undefined,
+    canonical: product ? `${SITE_URL}/products/${product.slug}` : undefined,
   });
 
+  if (!product || !price) {
+    return <Navigate to="/catalogue" replace />;
+  }
+
+  const specs = [
+    product.sku ? { label: 'SKU', value: product.sku } : null,
+    selectedVariant?.sku ? { label: 'Variant SKU', value: selectedVariant.sku } : null,
+    product.material ? { label: 'Material', value: product.material } : null,
+    product.colour ? { label: 'Colour', value: product.colour } : null,
+    product.capacity ? { label: 'Capacity', value: product.capacity } : null,
+    product.dimensions ? { label: 'Dimensions', value: product.dimensions } : null,
+    packQty ? { label: 'Pack / case quantity', value: String(packQty) } : null,
+  ].filter(Boolean) as { label: string; value: string }[];
+
+  const onAdd = () => {
+    const result = addItem({
+      productId: product.id,
+      variantId: product.variants.length ? variantId : null,
+      quantity,
+    });
+    if (result.ok === false) {
+      toast.error(result.error);
+      return;
+    }
+    toast.success('Added to quote list');
+  };
+
   return (
-    <div className="min-h-screen bg-background">
+    <Layout>
       <ProductStructuredData
         name={product.name}
-        description={product.description}
-        image={currentVariant.image}
-        sku={product.slug}
-        category={`Leather ${product.name}`}
-        material={product.specs?.material || 'Premium Leather'}
+        description={product.shortDescriptionText || product.descriptionText || product.name}
+        image={activeImage?.src}
+        sku={selectedVariant?.sku || product.sku || product.slug}
+        category={category?.displayName}
+        material={product.material || undefined}
+        price={price}
+        url={`${SITE_URL}/products/${product.slug}`}
       />
-      <Navigation />
-      {/* Hero Section */}
-      <section className="py-20 px-4 bg-gradient-to-br from-luxury-dark/5 via-luxury-navy/5 to-luxury-purple/5">
-        <div className="container mx-auto max-w-6xl">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            {/* Product Image */}
-            <div className="relative">
-              <div className="aspect-square bg-gradient-to-br from-luxury-dark/10 to-luxury-navy/10 rounded-2xl p-8">
-                <img
-                  src={currentVariant.image}
-                  alt={currentVariant.name}
-                  className="w-full h-full object-cover rounded-xl shadow-2xl"
-                />
+      <BreadcrumbStructuredData
+        items={[
+          { name: 'Home', url: `${SITE_URL}/` },
+          { name: 'Catalogue', url: `${SITE_URL}/catalogue` },
+          ...(category
+            ? [
+                {
+                  name: category.displayName,
+                  url: `${SITE_URL}/catalogue?category=${category.slug}`,
+                },
+              ]
+            : []),
+          { name: product.name, url: `${SITE_URL}/products/${product.slug}` },
+        ]}
+      />
+
+      <div className="container mx-auto py-8 md:py-10">
+        <nav className="text-sm text-muted-foreground mb-6" aria-label="Breadcrumb">
+          <ol className="flex flex-wrap gap-1">
+            <li>
+              <Link to="/" className="hover:text-foreground">
+                Home
+              </Link>
+            </li>
+            <li aria-hidden>/</li>
+            <li>
+              <Link to="/catalogue" className="hover:text-foreground">
+                Catalogue
+              </Link>
+            </li>
+            {category && (
+              <>
+                <li aria-hidden>/</li>
+                <li>
+                  <Link
+                    to={`/catalogue?category=${category.slug}`}
+                    className="hover:text-foreground"
+                  >
+                    {category.displayName}
+                  </Link>
+                </li>
+              </>
+            )}
+            <li aria-hidden>/</li>
+            <li className="text-foreground">{product.name}</li>
+          </ol>
+        </nav>
+
+        <div className="grid lg:grid-cols-2 gap-10">
+          <div>
+            <ProductImage
+              src={activeImage?.src}
+              alt={activeImage?.alt || product.name}
+              className="aspect-square rounded-md"
+              priority
+            />
+            {gallery.length > 1 && (
+              <div className="mt-3 grid grid-cols-5 gap-2">
+                {gallery.slice(0, 5).map((image, idx) => (
+                  <button
+                    key={`${image.src}-${idx}`}
+                    type="button"
+                    className={`rounded-md overflow-hidden border ${idx === imageIndex ? 'border-primary' : 'border-border'}`}
+                    onClick={() => setImageIndex(idx)}
+                    aria-label={`View image ${idx + 1}`}
+                  >
+                    <ProductImage
+                      src={image.src}
+                      alt=""
+                      className="aspect-square"
+                      imgClassName="object-cover"
+                    />
+                  </button>
+                ))}
               </div>
-              {/* Decorative elements */}
-              <div className="absolute -top-4 -right-4 w-24 h-24 bg-accent/20 rounded-full blur-xl"></div>
-              <div className="absolute -bottom-4 -left-4 w-32 h-32 bg-luxury-purple/20 rounded-full blur-xl"></div>
+            )}
+          </div>
+
+          <div>
+            {category && (
+              <p className="text-sm text-muted-foreground mb-2">{category.displayName}</p>
+            )}
+            <h1 className="text-3xl md:text-4xl">{product.name}</h1>
+            <p className="mt-4 text-2xl font-semibold">{formatPriceInfo(price)}</p>
+            <p className="mt-1 text-sm text-muted-foreground">
+              Guide price from catalogue data. VAT treatment is not stated here unless separately
+              confirmed.
+            </p>
+
+            {product.variants.length > 0 && (
+              <div className="mt-6 space-y-2">
+                <Label htmlFor="product-variant">Options</Label>
+                <select
+                  id="product-variant"
+                  className="w-full rounded-md border border-input bg-background px-3 py-2 text-sm"
+                  value={variantId}
+                  onChange={(e) => {
+                    setVariantId(e.target.value);
+                    setImageIndex(0);
+                  }}
+                >
+                  {product.variants.map((variant) => (
+                    <option key={variant.id} value={variant.id}>
+                      {variant.label} — {formatPriceInfo(variant.price)}
+                    </option>
+                  ))}
+                </select>
+              </div>
+            )}
+
+            <div className="mt-6 space-y-2 max-w-xs">
+              <Label htmlFor="product-qty">
+                Quantity ({packUnit}
+                {packQty ? `s of ${packQty}` : 's'})
+              </Label>
+              <Input
+                id="product-qty"
+                type="number"
+                min={1}
+                max={9999}
+                value={quantity}
+                onChange={(e) => setQuantity(Math.max(1, Number(e.target.value) || 1))}
+              />
             </div>
 
-            {/* Product Info */}
-            <div className="space-y-6">
-              <div>
-                <h1 className="text-4xl lg:text-5xl font-display font-bold text-foreground mb-4">
-                  {product.name}
-                </h1>
-                <p className="text-xl text-muted-foreground leading-relaxed">
-                  {product.description}
+            <div className="mt-6 flex flex-wrap gap-3">
+              <Button type="button" size="lg" onClick={onAdd}>
+                Add to quote
+              </Button>
+              <Button asChild size="lg" variant="outline">
+                <Link to="/quote">View quote list</Link>
+              </Button>
+            </div>
+
+            {(product.shortDescriptionText || product.descriptionText) && (
+              <div className="mt-8 prose prose-sm max-w-none text-foreground">
+                <h2 className="font-display text-xl mb-2">Description</h2>
+                <p className="text-muted-foreground leading-relaxed whitespace-pre-line">
+                  {product.shortDescriptionText || product.descriptionText}
                 </p>
               </div>
+            )}
 
-              {/* Color Variants */}
-              {product.variants && product.variants.length > 0 && (
-                <div className="space-y-4">
-                  <h3 className="text-lg font-semibold text-foreground">
-                    Available Colors
-                  </h3>
-                  <div className="flex flex-wrap gap-3">
-                    {product.variants.map((variant, idx) => (
-                      <button
-                        key={variant.id}
-                        onClick={() => setSelectedVariant(idx)}
-                        className={`px-4 py-2 rounded-lg border-2 transition-all duration-200 ${
-                          selectedVariant === idx
-                            ? 'border-accent bg-accent/10 text-accent'
-                            : 'border-muted-foreground/30 hover:border-accent/50 text-muted-foreground hover:text-foreground'
-                        }`}
-                      >
-                        <div className="flex items-center space-x-2">
-                          <div
-                            className="w-4 h-4 rounded-full border border-muted-foreground/30"
-                            style={{
-                              backgroundColor: variant.color
-                                .toLowerCase()
-                                .includes('brown')
-                                ? '#8B4513'
-                                : variant.color
-                                    .toLowerCase()
-                                    .includes('dark brown')
-                                ? '#654321'
-                                : variant.color.toLowerCase().includes('tan')
-                                ? '#D2B48C'
-                                : variant.color.toLowerCase().includes('orange')
-                                ? '#FFA500'
-                                : variant.color.toLowerCase().includes('olive')
-                                ? '#808000'
-                                : variant.color.toLowerCase().includes('green')
-                                ? '#228B22'
-                                : variant.color.toLowerCase().includes('plum')
-                                ? '#8B008B'
-                                : variant.color.toLowerCase().includes('black')
-                                ? '#000000'
-                                : variant.color.toLowerCase().includes('navy')
-                                ? '#000080'
-                                : variant.color.toLowerCase().includes('cognac')
-                                ? '#9F4B3B'
-                                : variant.color
-                                    .toLowerCase()
-                                    .includes('burgundy')
-                                ? '#800020'
-                                : variant.color.toLowerCase().includes('gray')
-                                ? '#808080'
-                                : variant.color
-                                    .toLowerCase()
-                                    .includes('charcoal')
-                                ? '#36454F'
-                                : '#8B4513', // default brown
-                            }}
-                          ></div>
-                          <span className="text-sm font-medium">
-                            {variant.color}
-                          </span>
-                        </div>
-                      </button>
-                    ))}
-                  </div>
-                </div>
-              )}
-
-              <div className="space-y-4">
-                <h3 className="text-lg font-semibold text-foreground">
-                  Key Features
-                </h3>
-                <ul className="space-y-3">
-                  {product.features.map((feature, idx) => (
-                    <li key={idx} className="flex items-start">
-                      <div className="w-6 h-6 bg-accent/20 rounded-full flex items-center justify-center mr-3 mt-0.5 flex-shrink-0">
-                        <div className="w-2 h-2 bg-accent rounded-full"></div>
-                      </div>
-                      <span className="text-muted-foreground">{feature}</span>
-                    </li>
+            {specs.length > 0 && (
+              <div className="mt-8">
+                <h2 className="font-display text-xl mb-3">Specifications</h2>
+                <dl className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm">
+                  {specs.map((spec) => (
+                    <div key={spec.label} className="rounded-md border border-border bg-card px-3 py-2">
+                      <dt className="text-muted-foreground">{spec.label}</dt>
+                      <dd className="font-medium mt-0.5">{spec.value}</dd>
+                    </div>
                   ))}
-                </ul>
+                </dl>
               </div>
+            )}
+          </div>
+        </div>
 
-              <div className="flex flex-col sm:flex-row gap-4 pt-4">
-                <Button
-                  asChild
-                  size="lg"
-                  variant="outline"
-                  className="font-medium"
-                >
-                  <Link to={`/sample-kit?product=${product.slug}`}>
-                    Request Samples
-                  </Link>
-                </Button>
-                <Button
-                  asChild
-                  size="lg"
-                  className="font-medium bg-primary hover:bg-primary/90"
-                >
-                  <Link to="/quote">Get Quote</Link>
-                </Button>
-              </div>
+        {related.length > 0 && (
+          <section className="mt-16">
+            <h2 className="text-2xl mb-6">Related products</h2>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-5 md:gap-7">
+              {related.map((item) => (
+                <ProductCard key={item.id} product={item} />
+              ))}
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Specifications Section */}
-      <section className="py-16 px-4">
-        <div className="container mx-auto max-w-6xl">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground mb-4">
-              Product Specifications
-            </h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Detailed specifications and technical information for this premium
-              leather product.
-            </p>
-          </div>
-
-          <div className="grid lg:grid-cols-2 gap-8">
-            {/* Specifications Card */}
-            <Card className="bg-gradient-to-br from-luxury-dark/5 to-luxury-navy/5 border-accent/20">
-              <CardContent className="p-8">
-                <h3 className="text-xl font-semibold text-foreground mb-6 flex items-center">
-                  <div className="w-8 h-8 bg-accent/20 rounded-lg flex items-center justify-center mr-3">
-                    <div className="w-4 h-4 bg-accent rounded"></div>
-                  </div>
-                  Technical Details
-                </h3>
-                <div className="space-y-4">
-                  <div className="flex justify-between items-center py-3 border-b border-accent/10">
-                    <span className="font-medium text-foreground">
-                      Dimensions
-                    </span>
-                    <span className="text-muted-foreground">
-                      {product.specs.dimensions}
-                    </span>
-                  </div>
-                  <div className="flex justify-between items-center py-3 border-b border-accent/10">
-                    <span className="font-medium text-foreground">Weight</span>
-                    <span className="text-muted-foreground">
-                      {product.specs.weight}
-                    </span>
-                  </div>
-                  <div className="flex justify-between items-center py-3 border-b border-accent/10">
-                    <span className="font-medium text-foreground">
-                      Material
-                    </span>
-                    <span className="text-muted-foreground">
-                      {product.specs.material}
-                    </span>
-                  </div>
-                  <div className="flex justify-between items-center py-3 border-b border-accent/10">
-                    <span className="font-medium text-foreground">Lining</span>
-                    <span className="text-muted-foreground">
-                      {product.specs.lining}
-                    </span>
-                  </div>
-                  <div className="flex justify-between items-center py-3">
-                    <span className="font-medium text-foreground">
-                      Hardware
-                    </span>
-                    <span className="text-muted-foreground">
-                      {product.specs.hardware}
-                    </span>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-
-            {/* Features Card */}
-            <Card className="bg-gradient-to-br from-luxury-navy/5 to-luxury-purple/5 border-accent/20">
-              <CardContent className="p-8">
-                <h3 className="text-xl font-semibold text-foreground mb-6 flex items-center">
-                  <div className="w-8 h-8 bg-accent/20 rounded-lg flex items-center justify-center mr-3">
-                    <div className="w-4 h-4 bg-accent rounded-full"></div>
-                  </div>
-                  Key Features
-                </h3>
-                <div className="space-y-4">
-                  {product.features.map((feature, idx) => (
-                    <div key={idx} className="flex items-start py-2">
-                      <div className="w-6 h-6 bg-accent/20 rounded-full flex items-center justify-center mr-4 mt-0.5 flex-shrink-0">
-                        <div className="w-2 h-2 bg-accent rounded-full"></div>
-                      </div>
-                      <span className="text-muted-foreground leading-relaxed">
-                        {feature}
-                      </span>
-                    </div>
-                  ))}
-                </div>
-              </CardContent>
-            </Card>
-          </div>
-        </div>
-      </section>
-
-      {/* Price Calculator */}
-      <PriceCalculator />
-
-      {/* Additional Information Tabs */}
-      <section className="py-16 px-4 bg-gradient-to-br from-luxury-dark/5 via-luxury-navy/5 to-luxury-purple/5">
-        <div className="container mx-auto max-w-6xl">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground mb-4">
-              Additional Information
-            </h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Learn more about this product and get answers to common questions.
-            </p>
-          </div>
-
-          <Tabs defaultValue="description" className="w-full">
-            <TabsList className="grid grid-cols-3 w-full bg-luxury-navy/10 border border-accent/20">
-              <TabsTrigger
-                value="description"
-                className="data-[state=active]:bg-accent data-[state=active]:text-luxury-dark data-[state=active]:shadow-lg"
-              >
-                Description
-              </TabsTrigger>
-              <TabsTrigger
-                value="review"
-                className="data-[state=active]:bg-accent data-[state=active]:text-luxury-dark data-[state=active]:shadow-lg"
-              >
-                Reviews
-              </TabsTrigger>
-              <TabsTrigger
-                value="qa"
-                className="data-[state=active]:bg-accent data-[state=active]:text-luxury-dark data-[state=active]:shadow-lg"
-              >
-                Q & A
-              </TabsTrigger>
-            </TabsList>
-
-            <TabsContent value="description" className="pt-8">
-              <Card className="bg-gradient-to-br from-luxury-dark/5 to-luxury-navy/5 border-accent/20">
-                <CardContent className="p-8">
-                  <div className="prose prose-lg max-w-none">
-                    <p className="text-muted-foreground leading-relaxed text-lg">
-                      {product.description}
-                    </p>
-                    <div className="mt-6 p-6 bg-accent/10 rounded-xl border border-accent/20">
-                      <h4 className="font-semibold text-foreground mb-3">
-                        Why Choose This Product?
-                      </h4>
-                      <ul className="space-y-3 text-muted-foreground">
-                        <li className="flex items-start">
-                          <div className="w-5 h-5 bg-accent/20 rounded-full flex items-center justify-center mr-3 mt-0.5 flex-shrink-0">
-                            <div className="w-2 h-2 bg-accent rounded-full"></div>
-                          </div>
-                          <span>
-                            Handcrafted with premium materials for lasting
-                            quality
-                          </span>
-                        </li>
-                        <li className="flex items-start">
-                          <div className="w-5 h-5 bg-accent/20 rounded-full flex items-center justify-center mr-3 mt-0.5 flex-shrink-0">
-                            <div className="w-2 h-2 bg-accent rounded-full"></div>
-                          </div>
-                          <span>Customizable branding options available</span>
-                        </li>
-                        <li className="flex items-start">
-                          <div className="w-5 h-5 bg-accent/20 rounded-full flex items-center justify-center mr-3 mt-0.5 flex-shrink-0">
-                            <div className="w-2 h-2 bg-accent rounded-full"></div>
-                          </div>
-                          <span>Perfect for corporate gifting and retail</span>
-                        </li>
-                        <li className="flex items-start">
-                          <div className="w-5 h-5 bg-accent/20 rounded-full flex items-center justify-center mr-3 mt-0.5 flex-shrink-0">
-                            <div className="w-2 h-2 bg-accent rounded-full"></div>
-                          </div>
-                          <span>MOQ from 25 units with volume discounts</span>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-            </TabsContent>
-
-            <TabsContent value="review" className="pt-8">
-              <Card className="bg-gradient-to-br from-luxury-navy/5 to-luxury-purple/5 border-accent/20">
-                <CardContent className="p-8 text-center">
-                  <div className="py-12">
-                    <div className="w-16 h-16 bg-accent/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                      <div className="w-8 h-8 bg-accent rounded-full"></div>
-                    </div>
-                    <h3 className="text-xl font-semibold text-foreground mb-2">
-                      Reviews Coming Soon
-                    </h3>
-                    <p className="text-muted-foreground">
-                      Customer reviews will be available once we start receiving
-                      feedback from our clients.
-                    </p>
-                  </div>
-                </CardContent>
-              </Card>
-            </TabsContent>
-
-            <TabsContent value="qa" className="pt-8">
-              <Card className="bg-gradient-to-br from-luxury-purple/5 to-luxury-dark/5 border-accent/20">
-                <CardContent className="p-8">
-                  <div className="space-y-6">
-                    <div className="text-center mb-8">
-                      <h3 className="text-xl font-semibold text-foreground mb-2">
-                        Frequently Asked Questions
-                      </h3>
-                      <p className="text-muted-foreground">
-                        Have a question? Contact us for more information.
-                      </p>
-                    </div>
-
-                    <div className="space-y-4">
-                      <div className="p-4 bg-accent/10 rounded-lg border border-accent/20">
-                        <h4 className="font-semibold text-foreground mb-2">
-                          What is the minimum order quantity?
-                        </h4>
-                        <p className="text-muted-foreground text-sm">
-                          Minimum order quantity is 100 units for most products.
-                        </p>
-                      </div>
-                      <div className="p-4 bg-accent/10 rounded-lg border border-accent/20">
-                        <h4 className="font-semibold text-foreground mb-2">
-                          How long does production take?
-                        </h4>
-                        <p className="text-muted-foreground text-sm">
-                          Production typically takes 4-6 weeks from order
-                          confirmation.
-                        </p>
-                      </div>
-                      <div className="p-4 bg-accent/10 rounded-lg border border-accent/20">
-                        <h4 className="font-semibold text-foreground mb-2">
-                          Can I customize the branding?
-                        </h4>
-                        <p className="text-muted-foreground text-sm">
-                          Yes, we offer various branding options including
-                          embossing, debossing, and custom hardware.
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-            </TabsContent>
-          </Tabs>
-        </div>
-      </section>
-      <Footer />
-    </div>
+          </section>
+        )}
+      </div>
+    </Layout>
   );
-};
-
-export default ProductDetail;
+}

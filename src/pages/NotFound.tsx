@@ -1,27 +1,32 @@
-import { useLocation, Link } from "react-router-dom";
-import { useEffect } from "react";
+import { Link } from 'react-router-dom';
+import Layout from '@/components/Layout';
+import { Button } from '@/components/ui/button';
+import useSEO from '@/hooks/useSEO';
 
-const NotFound = () => {
-  const location = useLocation();
-
-  useEffect(() => {
-    console.error(
-      "404 Error: User attempted to access non-existent route:",
-      location.pathname
-    );
-  }, [location.pathname]);
+export default function NotFound() {
+  useSEO({
+    title: 'Page not found',
+    description: 'The page you requested could not be found.',
+    noindex: true,
+  });
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4">404</h1>
-        <p className="text-xl text-gray-600 mb-4">Oops! Page not found</p>
-        <Link to="/" className="text-blue-500 hover:text-blue-700 underline">
-          Return to Home
-        </Link>
+    <Layout>
+      <div className="container mx-auto py-20 text-center max-w-lg">
+        <h1 className="text-3xl">Page not found</h1>
+        <p className="mt-3 text-muted-foreground">
+          That address is not part of the PCS UK catalogue. Try searching products or browse by
+          category.
+        </p>
+        <div className="mt-6 flex justify-center gap-3">
+          <Button asChild>
+            <Link to="/catalogue">Browse catalogue</Link>
+          </Button>
+          <Button asChild variant="outline">
+            <Link to="/">Home</Link>
+          </Button>
+        </div>
       </div>
-    </div>
+    </Layout>
   );
-};
-
-export default NotFound;
+}

@@ -1,6 +1,14 @@
 {
   "rewrites": [
     {
+      "source": "/product/:slug",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/product-category/:slug",
+      "destination": "/index.html"
+    },
+    {
       "source": "/(.*)",
       "destination": "/index.html"
     }
@@ -15,7 +23,7 @@
         },
         {
           "key": "Content-Security-Policy",
-          "value": "default-src 'self'; img-src 'self' data: https:; script-src 'self' 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline'; connect-src 'self'; font-src 'self' data:; frame-ancestors 'none'; base-uri 'self'; form-action 'self'"
+          "value": "default-src 'self'; img-src 'self' data: https://pcsuk.co.uk https://*.pcsuk.co.uk https:; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' data: https://fonts.gstatic.com; connect-src 'self' https://formspree.io https://api.emailjs.com; frame-ancestors 'none'; base-uri 'self'; form-action 'self' https://formspree.io"
         },
         {
           "key": "Referrer-Policy",

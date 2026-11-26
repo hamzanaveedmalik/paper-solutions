@@ -1,0 +1,42 @@
+{
+  "startedAt": "2026-11-25T22:37:50.898Z",
+  "mode": "write",
+  "source": "woocommerce-store-api-cache",
+  "counts": {
+    "productsIn": 82,
+    "productsOut": 82,
+    "variationsIn": 136,
+    "variationsOut": 136,
+    "categories": 11,
+    "skipped": 0,
+    "duplicates": 0,
+    "missingImages": 0,
+    "ambiguousPricing": 1,
+    "conflictingInfo": 2,
+    "zeroPricesTreatedAsRequest": 21,
+    "imagesDownloaded": 0,
+    "imagesFailed": 0
+  },
+  "skipped": [],
+  "conflicts": [
+    {
+      "item": "product:greaseproof-sheets",
+      "detail": "prices.price is 0 but price_html suggests £9.99. Using Request price."
+    },
+    {
+      "item": "product:newsoffcuts",
+      "detail": "prices.price is 0 but price_html suggests £8.99. Using Request price."
+    }
+  ],
+  "ambiguousPricing": [
+    {
+      "item": "product:round-kraft-bowls-pack-of-300",
+      "detail": "Structured price is 0 but price_range is 1899-2499; using range."
+    }
+  ],
+  "missingImages": [],
+  "notes": [
+    "Source site has no product_cat “Packaging” in the Store API. Listed categories preserved without fabricating a Packaging category.",
+    "Images retained as remote pcsuk.co.uk URLs. Re-run with --download-images when network access to the origin is available."
+  ]
+}
