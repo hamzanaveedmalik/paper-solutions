@@ -19,9 +19,10 @@ import { siteConfig } from '@/config/site';
 import useSEO from '@/hooks/useSEO';
 import { toast } from 'sonner';
 
-export default function Quote() {
+export default function Quote({ requestType = 'quote' }: { requestType?: 'quote' | 'order' }) {
+  const order = requestType === 'order';
   useSEO({
-    title: 'Request a quote',
+    title: order ? 'Request an order' : 'Request a quote',
     description: 'Review your PCS UK quote list and send an enquiry for catering packaging.',
   });
 
@@ -78,6 +79,7 @@ export default function Quote() {
     }
 
     const result = await submitQuoteEnquiry({
+      requestType,
       name,
       businessName,
       email,
@@ -119,9 +121,9 @@ export default function Quote() {
         <div className="container mx-auto py-16 max-w-xl text-center">
           <h1 className="text-3xl">Enquiry received</h1>
           <p className="mt-4 text-muted-foreground">
-            Thank you. Your quote request has been accepted with reference{' '}
+            Thank you. Your request has been received with reference{' '}
             <span className="font-semibold text-foreground">{successRef}</span>. We will respond
-            using the contact details you provided.
+            using the contact details you provided. This is not a confirmed order.
           </p>
           <Button asChild className="mt-8">
             <Link to="/catalogue">Continue browsing</Link>
@@ -134,7 +136,7 @@ export default function Quote() {
   return (
     <Layout>
       <div className="container mx-auto py-8 md:py-10">
-        <p className="shop-eyebrow text-muted-foreground mb-3">YOUR SELECTION · YOUR QUANTITIES · YOUR QUOTE</p><h1 className="text-3xl md:text-4xl">Your quote basket</h1>
+        <p className="shop-eyebrow text-muted-foreground mb-3">YOUR SELECTION · YOUR QUANTITIES · YOUR QUOTE</p><h1 className="text-3xl md:text-4xl">{order ? 'Review your order request' : 'Your quote basket'}</h1>
         <p className="mt-2 text-muted-foreground max-w-2xl">
           Everything you need for your next service. Review your packs and cases, then send your
           list to our team for final pricing and delivery. No payment is taken here.
@@ -142,7 +144,7 @@ export default function Quote() {
 
         {!deliveryConfigured && (
           <div className="mt-4 rounded-md border border-amber-300 bg-amber-50 px-4 py-3 text-sm text-amber-950">
-            You can prepare your quote request here and email your selection to {siteConfig.enquiryEmail}.
+            Automatic sending is not set up yet. Review your details below to create an email draft for {siteConfig.enquiryEmail}. You must send the email yourself.
           </div>
         )}
 
@@ -237,7 +239,7 @@ export default function Quote() {
               onSubmit={onSubmit}
               className="relative rounded-md border border-border bg-card p-5 space-y-4"
             >
-              <h2 className="font-display text-2xl">Request your quote</h2>
+              <h2 className="font-display text-2xl">{order ? 'Your contact & delivery details' : 'Request your quote'}</h2>
 
               <div className="space-y-2">
                 <Label htmlFor="name">Name</Label>
@@ -355,7 +357,7 @@ export default function Quote() {
                   </Button>
                   <Button asChild variant="secondary">
                     <a
-                      href={`mailto:${siteConfig.enquiryEmail}?subject=${encodeURIComponent('PCS UK quote enquiry')}&body=${encodeURIComponent(manualSummary)}`}
+                      href={`mailto:${siteConfig.enquiryEmail}?subject=${encodeURIComponent(order ? 'PCS UK order request' : 'PCS UK quote enquiry')}&body=${encodeURIComponent(manualSummary)}`}
                     >
                       Open email to {siteConfig.enquiryEmail}
                     </a>
@@ -363,12 +365,13 @@ export default function Quote() {
                 </div>
               )}
 
+              <p className="text-sm text-muted-foreground">Review the products, options and quantities before sending. Our team must confirm pricing, stock and delivery before your order is accepted.</p>
               <Button
                 type="submit"
                 className="w-full"
                 disabled={submitting || resolvedLines.length === 0}
               >
-                {submitting ? 'Sending…' : 'Submit quote enquiry'}
+                {submitting ? 'Sending…' : !deliveryConfigured ? 'Prepare email draft' : order ? 'Send order request' : 'Submit quote enquiry'}
               </Button>
             </form>
           </section>
@@ -376,4 +379,20 @@ export default function Quote() {
       </div>
     </Layout>
   );
+}
+
+
+export function CheckoutOptions() {
+  useSEO({ title: 'Checkout options', description: 'Review your basket and choose how to request your order.' });
+  const { items, itemCount } = useQuote();
+  return <Layout><div className="container max-w-4xl py-10 md:py-16">
+    <p className="shop-eyebrow text-muted-foreground mb-3">YOUR BASKET · YOUR NEXT STEP</p>
+    <h1 className="text-3xl md:text-4xl">How would you like to order?</h1>
+    <p className="mt-3 text-muted-foreground">{itemCount} packs / cases in your basket. Final prices, VAT, stock and delivery need confirmation.</p>
+    {!items.length ? <div className="mt-8 rounded-xl border bg-muted/30 p-8"><h2 className="text-xl">Your basket is empty</h2><p className="mt-2 text-muted-foreground">Choose your products and quantities first.</p><Button asChild className="mt-5"><Link to="/catalogue">Shop products</Link></Button></div> : <div className="mt-8 grid gap-5 md:grid-cols-2">
+      <section className="rounded-2xl border p-6"><h2 className="text-2xl">Request an order</h2><p className="mt-3 text-muted-foreground">Review your products, add your delivery postcode and contact details, and ask our team to confirm the order.</p><p className="mt-4 text-sm text-muted-foreground">{isEnquiryDeliveryConfigured() ? 'Submit your request after reviewing it.' : 'Currently uses an email draft that you send yourself.'} No payment is taken.</p><Button asChild className="mt-6 w-full"><Link to="/order">Review order request</Link></Button></section>
+      <section className="rounded-2xl border bg-muted/30 p-6" aria-label="Online payment unavailable"><span className="rounded-full border bg-white px-3 py-1 text-xs font-semibold">Not available yet</span><h2 className="mt-4 text-2xl">Pay online</h2><p className="mt-3 text-muted-foreground">Online payments will be available once payment processing, final prices, stock, VAT and delivery charges are configured.</p><Button disabled className="mt-6 w-full">Online payments unavailable</Button><p className="mt-3 text-sm text-muted-foreground">Please do not send card details by chat or email.</p></section>
+    </div>}
+    <Link to="/quote" className="mt-6 inline-block text-sm underline underline-offset-4">Edit your basket or request a quote</Link>
+  </div></Layout>;
 }
