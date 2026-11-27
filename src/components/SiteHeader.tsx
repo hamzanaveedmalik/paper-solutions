@@ -1,146 +1,33 @@
 import { FormEvent, useMemo, useState } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
-import { Menu, Search, ShoppingBasket, X } from 'lucide-react';
+import { Link, NavLink, useNavigate } from 'react-router-dom';
+import { Menu, Search, PackageOpen, Mail, ChevronDown } from 'lucide-react';
 import { siteConfig } from '@/config/site';
 import { getCategories } from '@/data/catalogue';
-import { useQuote } from '@/contexts/QuoteContext';
 import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import {
-  Sheet,
-  SheetContent,
-  SheetHeader,
-  SheetTitle,
-  SheetTrigger,
-} from '@/components/ui/sheet';
+import { Sheet, SheetContent, SheetDescription, SheetHeader, SheetTitle, SheetTrigger } from '@/components/ui/sheet';
+import QuoteBasket from '@/components/QuoteBasket';
 
 export default function SiteHeader() {
   const navigate = useNavigate();
-  const { itemCount } = useQuote();
   const categories = useMemo(() => getCategories(), []);
   const [query, setQuery] = useState('');
   const [mobileOpen, setMobileOpen] = useState(false);
-
   const onSearch = (event: FormEvent) => {
     event.preventDefault();
-    const q = query.trim();
-    navigate(q ? `/catalogue?q=${encodeURIComponent(q)}` : '/catalogue');
+    navigate(query.trim() ? `/catalogue?q=${encodeURIComponent(query.trim())}` : '/catalogue');
     setMobileOpen(false);
   };
-
-  return (
-    <header className="sticky top-0 z-50 border-b border-border bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/90">
-      <div className="container mx-auto">
-        <div className="flex items-center gap-3 py-3 lg:gap-6">
-          <Link to="/" className="shrink-0" aria-label={`${siteConfig.brandName} home`}>
-            <img
-              src={siteConfig.logoPath}
-              alt={siteConfig.legalName}
-              className="h-12 w-auto md:h-14"
-              width={168}
-              height={112}
-            />
-          </Link>
-
-          <form onSubmit={onSearch} className="hidden md:flex flex-1 max-w-xl relative">
-            <label htmlFor="site-search" className="sr-only">
-              Search products
-            </label>
-            <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" aria-hidden />
-            <Input
-              id="site-search"
-              value={query}
-              onChange={(e) => setQuery(e.target.value)}
-              placeholder="Search by name or SKU"
-              className="pl-9"
-            />
-          </form>
-
-          <nav className="hidden lg:flex items-center gap-1" aria-label="Primary">
-            <Button asChild variant="ghost" size="sm">
-              <Link to="/catalogue">Catalogue</Link>
-            </Button>
-            <Button asChild variant="ghost" size="sm">
-              <Link to="/contact">Contact</Link>
-            </Button>
-          </nav>
-
-          <Button asChild className="relative shrink-0">
-            <Link to="/quote" aria-label={`Quote list, ${itemCount} items`}>
-              <ShoppingBasket className="h-4 w-4 mr-2" aria-hidden />
-              Quote
-              {itemCount > 0 && (
-                <span className="ml-2 inline-flex min-w-5 h-5 items-center justify-center rounded-full bg-primary-foreground/15 px-1.5 text-xs font-semibold">
-                  {itemCount}
-                </span>
-              )}
-            </Link>
-          </Button>
-
-          <Sheet open={mobileOpen} onOpenChange={setMobileOpen}>
-            <SheetTrigger asChild>
-              <Button variant="outline" size="icon" className="lg:hidden" aria-label="Open menu">
-                {mobileOpen ? <X className="h-4 w-4" /> : <Menu className="h-4 w-4" />}
-              </Button>
-            </SheetTrigger>
-            <SheetContent side="right" className="w-[min(100%,22rem)]">
-              <SheetHeader>
-                <SheetTitle>Browse</SheetTitle>
-              </SheetHeader>
-              <form onSubmit={onSearch} className="mt-4 relative">
-                <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
-                <Input
-                  value={query}
-                  onChange={(e) => setQuery(e.target.value)}
-                  placeholder="Search products"
-                  className="pl-9"
-                />
-              </form>
-              <div className="mt-6 space-y-1">
-                <Link
-                  to="/catalogue"
-                  className="block rounded-md px-3 py-2 text-sm font-medium hover:bg-muted"
-                  onClick={() => setMobileOpen(false)}
-                >
-                  All products
-                </Link>
-                {categories.map((cat) => (
-                  <Link
-                    key={cat.slug}
-                    to={`/catalogue?category=${cat.slug}`}
-                    className="block rounded-md px-3 py-2 text-sm hover:bg-muted"
-                    onClick={() => setMobileOpen(false)}
-                  >
-                    {cat.displayName}
-                  </Link>
-                ))}
-                <Link
-                  to="/contact"
-                  className="block rounded-md px-3 py-2 text-sm font-medium hover:bg-muted"
-                  onClick={() => setMobileOpen(false)}
-                >
-                  Contact
-                </Link>
-              </div>
-            </SheetContent>
-          </Sheet>
-        </div>
-
-        <nav
-          className="hidden lg:flex items-center gap-1 pb-3 -mx-1 overflow-x-auto"
-          aria-label="Categories"
-        >
-          {categories.map((cat) => (
-            <Link
-              key={cat.slug}
-              to={`/catalogue?category=${cat.slug}`}
-              className="whitespace-nowrap rounded-full px-3 py-1.5 text-sm text-muted-foreground hover:text-foreground hover:bg-secondary transition-colors"
-            >
-              {cat.displayName}
-            </Link>
-          ))}
-        </nav>
+  return <header className="sticky top-0 z-40 bg-white shadow-sm">
+    <div className="shop-announcement"><div className="container flex items-center justify-between gap-3 py-2"><span>Packaging for the way you serve.</span><Link to="/contact" className="hidden sm:flex items-center gap-2"><Mail size={14} aria-hidden />Need a hand? Talk to our team</Link></div></div>
+    <div className="container">
+      <div className="shop-main-header">
+        <Link to="/" className="shop-wordmark" aria-label={`${siteConfig.brandName} home`}><span className="shop-logo-monogram">PCS<span>UK</span></span><span className="shop-brand-description">PREMIUM CATERING<br/>SUPPLIES</span></Link>
+        <form onSubmit={onSearch} className="shop-search"><label htmlFor="site-search" className="sr-only">Search products</label><input id="site-search" value={query} onChange={e => setQuery(e.target.value)} placeholder="Search cups, containers, bags & more…" autoComplete="off"/><button aria-label="Search products" type="submit"><Search size={20}/></button></form>
+        <QuoteBasket />
+        <Sheet open={mobileOpen} onOpenChange={setMobileOpen}><SheetTrigger asChild><Button variant="outline" size="icon" className="lg:hidden shrink-0" aria-label="Open categories"><Menu size={21}/></Button></SheetTrigger><SheetContent side="left" className="overflow-y-auto"><SheetHeader className="text-left"><SheetTitle>Shop by category</SheetTitle><SheetDescription>Find packaging for your next service.</SheetDescription></SheetHeader><nav className="mt-6 grid gap-1"><Link to="/catalogue" onClick={() => setMobileOpen(false)} className="p-3 font-bold">All products</Link>{categories.map(c => <Link key={c.id} to={`/catalogue?category=${c.slug}`} className="flex justify-between rounded-lg p-3 hover:bg-secondary" onClick={() => setMobileOpen(false)}>{c.displayName}<span className="text-muted-foreground">{c.productCount}</span></Link>)}<Link className="p-3" to="/contact" onClick={() => setMobileOpen(false)}>Contact our team</Link></nav></SheetContent></Sheet>
       </div>
-    </header>
-  );
+      <nav className="shop-category-nav" aria-label="Shop categories"><NavLink to="/catalogue" className="shop-all-categories"><Menu size={17}/>All products<ChevronDown size={14}/></NavLink>{['food-containers-and-sauce-pots','paper-bags','cups-accessories','paper-boxes','bagasse-packaging'].map(slug => {const c=categories.find(c => c.slug===slug);return c ? <Link key={c.id} to={`/catalogue?category=${c.slug}`}>{c.displayName.replace('Food Containers & Sauce Pots','Food containers').replace('Cups & Accessories','Cups & lids')}</Link> : null;})}<Link to="/contact" className="ml-auto">Bulk enquiries</Link></nav>
+    </div>
+    <div className="shop-service-strip"><div className="container flex items-center justify-between gap-4 py-2.5"><span className="flex items-center gap-2"><PackageOpen size={16} aria-hidden/>Packs & cases for your business</span><span className="hidden sm:inline">{categories.length} categories. One everyday supply list.</span><span className="hidden lg:inline">Build your basket. Get a tailored quote.</span></div></div>
+  </header>;
 }

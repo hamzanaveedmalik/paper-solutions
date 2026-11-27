@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { cn } from '@/lib/utils';
 
 type ProductImageProps = {
@@ -17,6 +17,7 @@ export default function ProductImage({
   priority = false,
 }: ProductImageProps) {
   const [failed, setFailed] = useState(false);
+  useEffect(() => setFailed(false), [src]);
   const showPlaceholder = !src || failed;
 
   return (

@@ -1,4 +1,4 @@
-import { useMemo, useState } from 'react';
+import { useMemo, useState, useEffect } from 'react';
 import { Link, Navigate, useParams } from 'react-router-dom';
 import Layout from '@/components/Layout';
 import ProductCard from '@/components/catalogue/ProductCard';
@@ -27,6 +27,12 @@ export default function ProductDetail() {
   const [variantId, setVariantId] = useState(product?.variants[0]?.id || '');
   const [quantity, setQuantity] = useState(1);
   const [imageIndex, setImageIndex] = useState(0);
+
+  useEffect(() => {
+    setVariantId(product?.variants[0]?.id || '');
+    setQuantity(1);
+    setImageIndex(0);
+  }, [product]);
 
   const selectedVariant = useMemo(() => {
     if (!product) return null;
@@ -81,7 +87,7 @@ export default function ProductDetail() {
       toast.error(result.error);
       return;
     }
-    toast.success('Added to quote list');
+    toast.success('Added to your quote basket');
   };
 
   return (
@@ -181,8 +187,7 @@ export default function ProductDetail() {
             <h1 className="text-3xl md:text-4xl">{product.name}</h1>
             <p className="mt-4 text-2xl font-semibold">{formatPriceInfo(price)}</p>
             <p className="mt-1 text-sm text-muted-foreground">
-              Guide price from catalogue data. VAT treatment is not stated here unless separately
-              confirmed.
+              Guide price per pack or case. Final pricing, VAT and delivery are confirmed in your quote.
             </p>
 
             {product.variants.length > 0 && (
@@ -223,10 +228,10 @@ export default function ProductDetail() {
 
             <div className="mt-6 flex flex-wrap gap-3">
               <Button type="button" size="lg" onClick={onAdd}>
-                Add to quote
+                Add to basket
               </Button>
               <Button asChild size="lg" variant="outline">
-                <Link to="/quote">View quote list</Link>
+                <Link to="/quote">View quote basket</Link>
               </Button>
             </div>
 
