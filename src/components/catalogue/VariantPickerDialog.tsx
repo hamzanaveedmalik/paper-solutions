@@ -48,7 +48,7 @@ export default function VariantPickerDialog({
       toast.error(result.error);
       return;
     }
-    toast.success('Added to quote list');
+    toast.success('Added to your quote basket');
     onOpenChange(false);
   };
 
@@ -104,7 +104,7 @@ export default function VariantPickerDialog({
             Cancel
           </Button>
           <Button type="button" onClick={onAdd}>
-            Add to quote
+            Add to basket
           </Button>
         </DialogFooter>
       </DialogContent>
