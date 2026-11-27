@@ -42,7 +42,7 @@ export default function QuoteBasket() {
             </div>
           ))}
         </div>
-        {!!lines.length && <div className="border-t bg-muted/40 p-6"><div className="mb-2 flex justify-between font-semibold"><span>{allPriced ? 'Guide subtotal' : 'Guide subtotal · priced items'}</span><span>{hasPricedItems ? formatMoney({amountMinor: subtotal, currency:'GBP', minorUnit:2}) : 'To be quoted'}</span></div><p className="mb-5 text-sm text-muted-foreground">Final pricing, VAT and delivery confirmed in your quote. No payment is taken online.</p><Button asChild className="w-full h-12"><Link to="/quote" onClick={() => setOpen(false)}>Review & request a quote</Link></Button></div>}
+        {!!lines.length && <div className="border-t bg-muted/40 p-6"><div className="mb-2 flex justify-between font-semibold"><span>{allPriced ? 'Guide subtotal' : 'Guide subtotal · priced items'}</span><span>{hasPricedItems ? formatMoney({amountMinor: subtotal, currency:'GBP', minorUnit:2}) : 'To be quoted'}</span></div><p className="mb-5 text-sm text-muted-foreground">Final pricing, VAT and delivery confirmed in your quote. No payment is taken online.</p><Button asChild className="w-full h-12"><Link to="/quote" onClick={() => setOpen(false)}>Review & request a quote</Link></Button><Button asChild variant="outline" className="mt-2 w-full"><Link to="/checkout" onClick={() => setOpen(false)}>Order & checkout options</Link></Button></div>}
       </SheetContent>
     </Sheet>
   );

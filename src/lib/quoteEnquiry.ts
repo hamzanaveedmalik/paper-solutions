@@ -5,6 +5,7 @@ import { siteConfig } from '@/config/site';
 import type { QuoteLineItem } from '@/data/types';
 
 export const quoteEnquirySchema = z.object({
+  requestType: z.enum(['quote', 'order']).optional(),
   name: z.string().trim().min(2, 'Please enter your name').max(120),
   businessName: z.string().trim().min(2, 'Please enter your business name').max(160),
   email: z.string().trim().email('Enter a valid email address').max(160),
@@ -82,6 +83,9 @@ export function revalidateQuoteItems(items: QuoteLineItem[]): {
 } {
   const lines = [];
   for (const item of items) {
+    if (!Number.isInteger(item.quantity) || item.quantity < 1 || item.quantity > 9999) {
+      return { ok: false, error: 'Choose a whole number of packs or cases between 1 and 9999.', lines: [] };
+    }
     const product = getProductById(item.productId);
     if (!product) {
       return { ok: false, error: 'One or more products are no longer in the catalogue.', lines: [] };
@@ -147,7 +151,7 @@ export function buildEnquirySummary(
     )
     .join('\n\n');
 
-  return `PCS UK quote enquiry
+  return `PCS UK ${data.requestType === 'order' ? 'order request' : 'quote enquiry'}
 Reference: ${reference}
 
 Contact
@@ -164,7 +168,7 @@ ${data.notes?.trim() || 'None'}
 Requested items
 ${itemBlock}
 
-— Submitted via PCS UK catalogue (not a confirmed order)
+— Prepared via PCS UK catalogue (not a confirmed order)
 `.trim();
 }
 
@@ -216,9 +220,10 @@ export async function submitQuoteEnquiry(
   if (endpoint) {
     try {
       const formData = new FormData();
-      formData.append('_subject', `PCS UK quote enquiry ${reference}`);
+      formData.append('_subject', `PCS UK ${data.requestType === 'order' ? 'order request' : 'quote enquiry'} ${reference}`);
       formData.append('_replyto', data.email);
       formData.append('reference', reference);
+      formData.append('requestType', data.requestType || 'quote');
       formData.append('name', data.name);
       formData.append('businessName', data.businessName);
       formData.append('email', data.email);
@@ -246,7 +251,8 @@ export async function submitQuoteEnquiry(
       return {
         success: false,
         error:
-          'We could not reach the enquiry service. Copy the summary below and email it to us, or try again shortly.',
+          'We could not confirm delivery of your request. Check with the team before resending. You can copy the summary below for reference.',
+        needsManualSend: { reference, summary },
       };
     }
   }
