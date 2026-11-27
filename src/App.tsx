@@ -8,6 +8,7 @@ import ScrollToTop from '@/components/ScrollToTop';
 import { QuoteProvider } from '@/contexts/QuoteContext';
 import LegacyRedirect from '@/components/LegacyRedirect';
 import Index from './pages/Index';
+import Categories from './pages/Categories';
 import Catalogue from './pages/Catalogue';
 import ProductDetail from './pages/ProductDetail';
 import Quote, { CheckoutOptions } from './pages/Quote';
@@ -28,6 +29,7 @@ const App = () => (
           <ShoppingAssistant />
           <Routes>
             <Route path="/" element={<Index />} />
+            <Route path="/categories" element={<Categories />} />
             <Route path="/catalogue" element={<Catalogue />} />
             <Route path="/products/:slug" element={<ProductDetail />} />
             <Route path="/product/:slug" element={<LegacyRedirect />} />
