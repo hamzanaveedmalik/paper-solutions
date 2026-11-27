@@ -134,16 +134,15 @@ export default function Quote() {
   return (
     <Layout>
       <div className="container mx-auto py-8 md:py-10">
-        <h1 className="text-3xl md:text-4xl">Quote list</h1>
+        <p className="shop-eyebrow text-muted-foreground mb-3">YOUR SELECTION · YOUR QUANTITIES · YOUR QUOTE</p><h1 className="text-3xl md:text-4xl">Your quote basket</h1>
         <p className="mt-2 text-muted-foreground max-w-2xl">
-          Your selections are saved in this browser. Send an enquiry and we will follow up with
-          pricing — this is not an online checkout.
+          Everything you need for your next service. Review your packs and cases, then send your
+          list to our team for final pricing and delivery. No payment is taken here.
         </p>
 
         {!deliveryConfigured && (
           <div className="mt-4 rounded-md border border-amber-300 bg-amber-50 px-4 py-3 text-sm text-amber-950">
-            Enquiry delivery endpoint is not configured (`VITE_FORMSPREE_QUOTES_ENDPOINT`). Valid
-            submissions will show a copyable summary to email to {siteConfig.enquiryEmail}.
+            You can prepare your quote request here and email your selection to {siteConfig.enquiryEmail}.
           </div>
         )}
 
@@ -151,7 +150,7 @@ export default function Quote() {
           <section aria-label="Quote items">
             {resolvedLines.length === 0 ? (
               <div className="rounded-md border border-dashed border-border p-10 text-center">
-                <h2 className="text-xl font-display">Your quote list is empty</h2>
+                <h2 className="text-xl font-display">Your quote basket is empty</h2>
                 <p className="mt-2 text-muted-foreground">
                   Browse the catalogue and add the packs or cases you need.
                 </p>
@@ -238,7 +237,7 @@ export default function Quote() {
               onSubmit={onSubmit}
               className="relative rounded-md border border-border bg-card p-5 space-y-4"
             >
-              <h2 className="font-display text-2xl">Send enquiry</h2>
+              <h2 className="font-display text-2xl">Request your quote</h2>
 
               <div className="space-y-2">
                 <Label htmlFor="name">Name</Label>

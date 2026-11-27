@@ -45,7 +45,7 @@ export default function Catalogue() {
       ? `${category.displayName} | Catalogue`
       : query.q
         ? `Search: ${query.q}`
-        : 'Product catalogue',
+        : 'Shop all products',
     description: category
       ? `Browse ${category.displayName} from PCS UK catering packaging.`
       : 'Search and filter PCS UK catering packaging and supplies.',
@@ -93,7 +93,7 @@ export default function Catalogue() {
 
         <div className="flex flex-col gap-2 mb-8">
           <h1 className="text-3xl md:text-4xl">
-            {category ? category.displayName : 'Product catalogue'}
+            {category ? category.displayName : 'Shop all products'}
           </h1>
           <p className="text-muted-foreground">
             {result.total} product{result.total === 1 ? '' : 's'}
@@ -102,7 +102,7 @@ export default function Catalogue() {
         </div>
 
         <div className="grid lg:grid-cols-[240px_1fr] gap-8">
-          <aside className="space-y-6" aria-label="Filters">
+          <aside className="space-y-6 shop-filter-panel" aria-label="Filters">
             <div>
               <Label htmlFor="catalogue-search">Search</Label>
               <Input
@@ -263,7 +263,7 @@ export default function Catalogue() {
                 </Button>
               </div>
             ) : (
-              <div className="grid grid-cols-2 md:grid-cols-3 gap-5 md:gap-7">
+              <div className="grid grid-cols-2 xl:grid-cols-3 gap-3 md:gap-5">
                 {result.items.map((product) => (
                   <ProductCard key={product.id} product={product} />
                 ))}
